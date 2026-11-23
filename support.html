@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTD Studio Support Center &amp; Ticket Portal — Official Microsoft Store Support</title>
+  <meta name="description" content="Official Customer Support Center, 3-Step Interactive Troubleshooting Wizard, FAQs, and Support Ticket Portal for Quick Audio Switcher v3.4, HabitGrid, Batch File Renamer, Quick Invoice Maker, and AuraDesk." />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="support">
+  <!-- Ambient Background Glow Orbs -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb orb-cyan"></div>
+    <div class="glow-orb orb-violet"></div>
+    <div class="glow-orb orb-blue"></div>
+  </div>
+
+  <!-- Sticky Smoked Liquid Glass Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" aria-label="MTD Studio Home">
+        <img src="assets/logo.png" alt="MTD Studio Logo" class="brand-logo" width="36" height="36" />
+        <div class="brand-text brand-meta">
+          <span class="brand-name">MTD Studio</span>
+          <span class="brand-tag" data-i18n="nav.brandTag">Official Microsoft Store Publisher</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link" data-i18n="nav.products">Products</a>
+        <a href="docs.html" class="nav-link" data-i18n="nav.docs">Docs &amp; API</a>
+        <a href="support.html" class="nav-link active" aria-current="page" data-i18n="nav.support">Support Center</a>
+        <a href="privacy.html" class="nav-link" data-i18n="nav.privacy">Privacy Policy</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn active" data-lang="en" onclick="window.setMtdLanguage && window.setMtdLanguage('en')">EN</button>
+          <button type="button" class="lang-btn" data-lang="vi" onclick="window.setMtdLanguage && window.setMtdLanguage('vi')">VI</button>
+        </div>
+        <a href="https://paypal.me/Developerhoangtruong" target="_blank" rel="noopener noreferrer" class="btn btn-paypal btn-sm" data-i18n="nav.donate">
+          Buy a Coffee
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero hero-compact">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          <span data-i18n="support.heroBadge">Direct Engineering Support · Avg Response &lt; 24 Hours · 100% Local Diagnostic Privacy</span>
+        </div>
+        <h1 class="hero-title" data-i18n="support.heroTitle">MTD Studio Support Center &amp; Ticket Portal</h1>
+        <p class="hero-subtitle" data-i18n="support.heroSubtitle">
+          Resolve issues in seconds with our interactive 3-step troubleshooting wizard, browse product FAQs, or send a formatted diagnostic ticket straight to the lead developer.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#wizard-section" class="btn btn-primary" data-i18n="support.ctaWizard">Run 3-Step Troubleshooter</a>
+          <a href="#ticket-section" class="btn btn-secondary" data-i18n="support.ctaTicket">Submit Support Ticket</a>
+          <a href="docs.html" class="btn btn-ghost" data-i18n="support.ctaDocs">Quick Audio Switcher v3.4 Guide</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Interactive 3-Step Troubleshooting Wizard -->
+    <section id="wizard-section" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-pro" data-i18n="support.wizardTag">Interactive Self-Service</span>
+          <h2 class="section-title" data-i18n="support.wizardTitle">3-Step Instant Troubleshooting Wizard</h2>
+          <p class="section-subtitle" data-i18n="support.wizardSubtitle">
+            Select your MTD Studio application and issue category to get verified step-by-step solutions or pre-fill a priority support ticket.
+          </p>
+        </div>
+
+        <div class="glass-card specular-top wizard-card">
+          <!-- Step Indicator Strip -->
+          <div class="wizard-steps" role="list">
+            <div class="wizard-step-pill active" data-step="1" role="listitem">
+              <span class="step-num">1</span>
+              <span class="step-label" data-i18n="support.step1Label">Select Product</span>
+            </div>
+            <div class="wizard-step-pill" data-step="2" role="listitem">
+              <span class="step-num">2</span>
+              <span class="step-label" data-i18n="support.step2Label">Choose Issue Category</span>
+            </div>
+            <div class="wizard-step-pill" data-step="3" role="listitem">
+              <span class="step-num">3</span>
+              <span class="step-label" data-i18n="support.step3Label">Instant Solution &amp; Ticket Action</span>
+            </div>
+          </div>
+
+          <!-- Step 1: Select Product -->
+          <div class="wizard-panel" id="wizard-step-1">
+            <h3 class="wizard-panel-title" data-i18n="support.step1Heading">Step 1 — Which application do you need help with?</h3>
+            <div class="pill-tabs wizard-product-grid" id="wizard-product-list" role="radiogroup" aria-label="Select Product">
+              <button type="button" class="pill-tab wizard-product-btn active" data-product="quick-audio-switcher" aria-checked="true">
+                <span class="pill-text">Quick Audio Switcher <small>v3.4.2</small></span>
+              </button>
+              <button type="button" class="pill-tab wizard-product-btn" data-product="habitgrid" aria-checked="false">
+                <span class="pill-text">Daily Habit Tracker / HabitGrid <small>v3.2</small></span>
+              </button>
+              <button type="button" class="pill-tab wizard-product-btn" data-product="batch-file-renamer" aria-checked="false">
+                <span class="pill-text">Batch File Renamer <small>v2.4</small></span>
+              </button>
+              <button type="button" class="pill-tab wizard-product-btn" data-product="quick-invoice-maker" aria-checked="false">
+                <span class="pill-text">Quick Invoice Maker <small>v2.1</small></span>
+              </button>
+              <button type="button" class="pill-tab wizard-product-btn" data-product="auradesk" aria-checked="false">
+                <span class="pill-text">AuraDesk <small>v1.5</small></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Select Issue Category -->
+          <div class="wizard-panel" id="wizard-step-2">
+            <h3 class="wizard-panel-title" data-i18n="support.step2Heading">Step 2 — What are you experiencing?</h3>
+            <div class="pill-tabs wizard-category-grid" id="wizard-category-list" role="radiogroup" aria-label="Select Issue Category">
+              <button type="button" class="pill-tab wizard-category-btn active" data-category="restore-pro" aria-checked="true">
+                <span data-i18n="support.catRestorePro">Restore Pro Purchase / License</span>
+              </button>
+              <button type="button" class="pill-tab wizard-category-btn" data-category="island-overlap" aria-checked="false">
+                <span data-i18n="support.catIslandOverlap">Dynamic Island overlaps browser tabs</span>
+              </button>
+              <button type="button" class="pill-tab wizard-category-btn" data-category="streamdeck-api" aria-checked="false">
+                <span data-i18n="support.catStreamDeck">Elgato Stream Deck / Local API connection</span>
+              </button>
+              <button type="button" class="pill-tab wizard-category-btn" data-category="audio-routing" aria-checked="false">
+                <span data-i18n="support.catAudioRouting">Per-app audio routing / Chat-Mix</span>
+              </button>
+              <button type="button" class="pill-tab wizard-category-btn" data-category="diagnostic-bug" aria-checked="false">
+                <span data-i18n="support.catDiagnosticBug">Attach diagnostic log / Bug report</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Instant Step-by-Step Solution Card -->
+          <div class="wizard-panel wizard-solution-box glass-card" id="wizard-step-3">
+            <div class="solution-header">
+              <div>
+                <span class="badge badge-store" id="wizard-solution-badge">Quick Audio Switcher · Pro License &amp; Store Billing</span>
+                <h3 class="solution-title" id="wizard-solution-title">How to Restore Your Lifetime Pro License on Any Windows 10/11 PC</h3>
+              </div>
+              <span class="badge badge-free" data-i18n="support.instantFixBadge">✓ Verified Instant Solution</span>
+            </div>
+
+            <div class="solution-body" id="wizard-solution-body">
+              <ol class="solution-steps-list">
+                <li>Open the <strong>Microsoft Store</strong> app on Windows and verify you are signed in with the exact Microsoft Account used to purchase <strong>Pro Lifetime ($3.99)</strong>.</li>
+                <li>Open <strong>Quick Audio Switcher → Settings (Gear Icon) → Account &amp; Pro Status</strong> and click <strong>Restore Purchase / Sync Store License</strong>.</li>
+                <li>Your digital license is tied to your Microsoft Account permanently (supports up to 10 Windows devices with zero recurring subscriptions). If Microsoft Store cache is stale, run <code>wsreset.exe</code> from the Start Menu and restart the app.</li>
+              </ol>
+            </div>
+
+            <!-- Copyable Diagnostic & Config Paths Box -->
+            <div class="url-copy-box wizard-path-box">
+              <div class="path-meta">
+                <span class="path-label" data-i18n="support.diagPathLabel">Local Diagnostic Log Path (Win + R):</span>
+                <code id="wizard-diag-path">%LocalAppData%\QuickAudioSwitcher\logs\diagnostic.log</code>
+              </div>
+              <div class="path-actions">
+                <button type="button" class="btn btn-secondary btn-sm copy-path-btn" data-copy-text="%LocalAppData%\QuickAudioSwitcher\logs\diagnostic.log" id="wizard-copy-path-btn">
+                  <span data-i18n="support.btnCopyLogPath">Copy Log Path</span>
+                </button>
+                <button type="button" class="btn btn-primary btn-sm" id="wizard-prefill-ticket-btn">
+                  <span data-i18n="support.btnPrefillTicket">Open Pre-Filled Ticket Below ↓</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Filterable & Searchable FAQ Accordion -->
+    <section id="faq-section" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-free" data-i18n="support.faqTag">Knowledge Base</span>
+          <h2 class="section-title" data-i18n="support.faqTitle">Frequently Asked Questions</h2>
+          <p class="section-subtitle" data-i18n="support.faqSubtitle">
+            Filter by product or search keywords across all 5 MTD Studio Windows utilities.
+          </p>
+        </div>
+
+        <!-- Filter Pills + Live Search Bar -->
+        <div class="faq-toolbar glass-card">
+          <div class="pill-tabs" id="faq-product-pills" role="tablist" aria-label="Filter FAQs by Product">
+            <button type="button" class="pill-tab active" data-faq-filter="all" role="tab" aria-selected="true" data-i18n="support.filterAll">All Apps (10)</button>
+            <button type="button" class="pill-tab" data-faq-filter="quick-audio-switcher" role="tab" aria-selected="false">Quick Audio Switcher</button>
+            <button type="button" class="pill-tab" data-faq-filter="habitgrid" role="tab" aria-selected="false">HabitGrid</button>
+            <button type="button" class="pill-tab" data-faq-filter="batch-file-renamer" role="tab" aria-selected="false">Batch File Renamer</button>
+            <button type="button" class="pill-tab" data-faq-filter="quick-invoice-maker" role="tab" aria-selected="false">Quick Invoice Maker</button>
+            <button type="button" class="pill-tab" data-faq-filter="auradesk" role="tab" aria-selected="false">AuraDesk</button>
+          </div>
+
+          <div class="faq-search-wrap">
+            <input
+              type="search"
+              id="faq-search-input"
+              class="form-control faq-search-input"
+              placeholder="Search FAQs (e.g., Ghost Mode,Alt click-through, Pro license, Stream Deck, WASAPI, JSON backup)..."
+              data-i18n-placeholder="support.faqSearchPlaceholder"
+              aria-label="Search FAQs"
+            />
+          </div>
+        </div>
+
+        <!-- Static Pre-Rendered Top 10 FAQs -->
+        <div class="faq-list" id="faq-list">
+          <!-- FAQ 1 -->
+          <article class="glass-card faq-item open" data-product="quick-audio-switcher">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span class="faq-q-left">
+                <span class="badge badge-pro">Quick Audio Switcher</span>
+                <span class="faq-q-text">How do I click a browser tab underneath the top Dynamic Island without moving it?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Hold the <code>Alt</code> key</strong> at any time! While <code>Alt</code> is held, Dynamic Island immediately enters <strong>Ghost Mode (Opacity 22% &amp; 100% mouse click-through)</strong> so you can click or drag browser tabs directly underneath. You can also drag Dynamic Island left or right along the top edge of your screen, or right-click it and select <em>"Hide for 5 seconds"</em> or <em>"Reset to center"</em>.
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ 2 -->
+          <article class="glass-card faq-item" data-product="quick-audio-switcher">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-left">
+                <span class="badge badge-pro">Quick Audio Switcher</span>
+                <span class="faq-q-text">Is the $3.99 Pro Upgrade a one-time lifetime license or a recurring subscription?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                It is a <strong>100% One-Time Lifetime License ($3.99 USD)</strong> billed securely through the official Microsoft Store. There are zero subscriptions, zero recurring fees, and it includes a <strong>7-day full Pro free trial</strong>. Once unlocked, your Microsoft Account license works across all your Windows 10 and Windows 11 PCs forever.
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ 3 -->
+          <article class="glass-card faq-item" data-product="quick-audio-switcher">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-left">
+                <span class="badge badge-pro">Quick Audio Switcher</span>
+                <span class="faq-q-text">How do I connect Elgato Stream Deck or use the Local REST &amp; WebSocket API?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Open <strong>Quick Audio Switcher → Settings → Integrations &amp; API</strong> and click <strong>"Install Stream Deck Plugin"</strong>. This automatically enables the loopback Local Control Server on <code>http://127.0.0.1:49152</code> and launches the <code>com.mtdstudio.quickaudioswitcher.streamDeckPlugin</code> installer. See our complete <a href="docs.html#api-reference">REST &amp; WebSocket API Documentation</a> for ready-to-copy <code>curl</code> and PowerShell commands.
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ 4 -->
+          <article class="glass-card faq-item" data-product="quick-audio-switcher">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-left">
+                <span class="badge badge-pro">Quick Audio Switcher</span>
+                <span class="faq-q-text">How do I change the volume of a specific game or app without opening the mixer?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Simply point your mouse cursor over any open window (or focus it) and roll <strong><code>Alt + Mouse Wheel</code></strong> up or down! Quick Audio Switcher adjusts that specific application's Windows Core Audio session volume in real time. You can also use the <strong>Unified 3-in-1 Taskbar Dock (316×34)</strong> or <strong>Side Edge Notch</strong> scroll wheel for instant <code>±2%</code> master volume control.
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ 5 -->
+          <article class="glass-card faq-item" data-product="quick-audio-switcher">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-left">
+                <span class="badge badge-pro">Quick Audio Switcher</span>
+                <span class="faq-q-text">Does Microphone Detection or Auto-Duck ever record or transmit my voice?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Never.</strong> Quick Audio Switcher only queries the Windows Core Audio (<code>WASAPI</code>) session state metadata to check whether a microphone endpoint is active or muted (to light up the <code>[● LIVE]</code> indicator or trigger Smart Auto-Duck / Call Autopilot). It never captures, buffers, listens to, records, or transmits any audio stream.
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ 6 -->
+          <article class="glass-card faq-item" data-product="quick-audio-switcher">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-left">
+                <span class="badge badge-pro">Quick Audio Switcher</span>
+                <span class="faq-q-text">What do the 5 toggles in the Audio Studio sub-panel do?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Click the <strong><code>[ ✦ Audio Studio › ]</code></strong> frosted pill on the Dynamic Island Controls tab to slide open 5 real-time audio enhancers: <strong>1. Smart Auto-Duck</strong> (lowers background music/games during voice calls), <strong>2. Spatial 3D Audio</strong> (toggles Windows Sonic surround sound), <strong>3. Safe Vol &amp; Mic Lock</strong> (prevents 100% Bluetooth reconnect volume spikes and locks mic gain), <strong>4. Solo Focus</strong> (mutes all background apps except your active window), and <strong>5. Call Autopilot</strong> (auto-pauses media playback when a mic call starts and resumes when finished).
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ 7 -->
+          <article class="glass-card faq-item" data-product="habitgrid">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-left">
+                <span class="badge badge-store">HabitGrid</span>
+                <span class="faq-q-text">Where does Daily Habit Tracker Widget (HabitGrid) store my streak heatmaps and how do I back them up?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                HabitGrid is 100% offline and stores all habit logs, streak heatmaps, and Pomodoro history locally in <code>%LocalAppData%\HabitGrid\</code>. You can export or import a portable JSON backup anytime via <strong>Settings → Data &amp; Backup → Export JSON</strong> to transfer your streaks across PCs without any cloud account.
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ 8 -->
+          <article class="glass-card faq-item" data-product="batch-file-renamer">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-left">
+                <span class="badge badge-store">Batch File Renamer</span>
+                <span class="faq-q-text">Can I undo a bulk file or photo rename batch if I made a mistake in my rule pattern?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! Batch File Renamer shows a real-time conflict-checked dry-run preview before touching any file on disk, and maintains an automatic local rollback transaction journal in <code>%LocalAppData%\BatchFileRenamer\history\</code>. Click <strong>Undo Last Batch (Ctrl+Z)</strong> to restore every original filename instantaneously.
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ 9 -->
+          <article class="glass-card faq-item" data-product="quick-invoice-maker">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-left">
+                <span class="badge badge-store">Quick Invoice Maker</span>
+                <span class="faq-q-text">Are my client records, tax rates, and generated PDF invoices stored on external servers?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                No. Quick Invoice Maker renders all PDF invoices, estimates, and receipts locally on your Windows machine and stores your client directory and templates exclusively in <code>%LocalAppData%\QuickInvoiceMaker\</code>. Your financial documents never leave your device.
+              </p>
+            </div>
+          </article>
+
+          <!-- FAQ 10 -->
+          <article class="glass-card faq-item" data-product="auradesk">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-left">
+                <span class="badge badge-store">AuraDesk</span>
+                <span class="faq-q-text">Does AuraDesk ambient focus audio work offline and alongside Quick Audio Switcher?</span>
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! All AuraDesk ambient soundscapes (rain, binaural focus, café, brown noise) are bundled locally for zero-latency offline playback, and integrate seamlessly with Quick Audio Switcher's Per-App Mixer and Smart Auto-Ducking during meetings.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <p id="faq-empty-state" class="faq-empty-msg" hidden data-i18n="support.faqNoMatch">
+          No FAQs matched your search filter. Try clearing the search box or send us a support ticket below!
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. Smart Support Ticket Form + 4. Support Indie Development Card -->
+    <section id="ticket-section" class="section-block">
+      <div class="container">
+        <div class="support-split-grid">
+          <!-- Left Column: Smart Support Ticket Form -->
+          <div class="glass-card specular-top ticket-card">
+            <div class="ticket-card-header">
+              <span class="badge badge-pro" data-i18n="support.ticketBadge">Direct Engineering Escalation</span>
+              <h2 class="section-title" data-i18n="support.ticketTitle">Submit a Smart Support Ticket</h2>
+              <p class="section-subtitle" data-i18n="support.ticketSubtitle">
+                Tickets go directly to <strong>developerhoangtruong@gmail.com</strong>. Include your diagnostic log path or steps to reproduce for fastest resolution.
+              </p>
+            </div>
+
+            <form id="support-ticket-form" class="ticket-form" novalidate>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="ticket-product" data-i18n="support.labelProduct">Product</label>
+                  <select id="ticket-product" name="product" class="form-control" required>
+                    <option value="quick-audio-switcher">Quick Audio Switcher - Sound &amp; Device Controller</option>
+                    <option value="habitgrid">Daily Habit Tracker Widget (HabitGrid)</option>
+                    <option value="batch-file-renamer">Batch File Renamer</option>
+                    <option value="quick-invoice-maker">Quick Invoice Maker</option>
+                    <option value="auradesk">AuraDesk</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="ticket-issue-type" data-i18n="support.labelIssueType">Issue Type</label>
+                  <select id="ticket-issue-type" name="issueType" class="form-control" required>
+                    <option value="Bug Report">Bug Report</option>
+                    <option value="Pro License / Store Billing">Pro License / Store Billing</option>
+                    <option value="Feature Request">Feature Request</option>
+                    <option value="Stream Deck &amp; API">Stream Deck &amp; API</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row-3">
+                <div class="form-group">
+                  <label for="ticket-app-version" data-i18n="support.labelAppVersion">App Version</label>
+                  <input type="text" id="ticket-app-version" name="appVersion" class="form-control" value="v3.4.2.0" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="ticket-win-version" data-i18n="support.labelWinVersion">Windows Version</label>
+                  <select id="ticket-win-version" name="windowsVersion" class="form-control" required>
+                    <option value="Windows 11 24H2/23H2">Windows 11 24H2/23H2</option>
+                    <option value="Windows 10 (22H2)">Windows 10</option>
+                    <option value="Windows Insider Preview">Windows Insider Preview</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="ticket-email" data-i18n="support.labelEmail">Your Email Address</label>
+                  <input type="email" id="ticket-email" name="email" class="form-control" placeholder="you@example.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="ticket-subject" data-i18n="support.labelSubject">Subject</label>
+                <input
+                  type="text"
+                  id="ticket-subject"
+                  name="subject"
+                  class="form-control"
+                  placeholder="Brief summary of the issue or feature request..."
+                  data-i18n-placeholder="support.placeholderSubject"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <div class="label-with-helper">
+                  <label for="ticket-message" data-i18n="support.labelMessage">Message / Steps to Reproduce</label>
+                  <button
+                    type="button"
+                    id="copy-diag-log-btn"
+                    class="btn btn-ghost btn-sm copy-path-btn"
+                    data-copy-text="%LocalAppData%\QuickAudioSwitcher\logs\diagnostic.log"
+                  >
+                    <span data-i18n="support.btnCopyDiagHelper">Copy Diagnostic Log Path (%LocalAppData%\QuickAudioSwitcher\logs\diagnostic.log)</span>
+                  </button>
+                </div>
+                <textarea
+                  id="ticket-message"
+                  name="message"
+                  rows="5"
+                  class="form-control"
+                  placeholder="1. What were you doing when the issue occurred?&#10;2. Expected vs. actual behavior:&#10;3. Paste relevant lines from %LocalAppData%\QuickAudioSwitcher\logs\diagnostic.log (optional):"
+                  data-i18n-placeholder="support.placeholderMessage"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- 3 Reliable Delivery Modes -->
+              <div class="ticket-actions-group">
+                <button type="submit" id="btn-submit-ticket" class="btn btn-primary">
+                  🚀 <span data-i18n="support.btnSendPrimary">Send Support Ticket</span>
+                </button>
+                <button type="button" id="btn-mailto-ticket" class="btn btn-secondary">
+                  <span data-i18n="support.btnOpenMailto">Open in Default Mail App (mailto:)</span>
+                </button>
+                <button type="button" id="btn-copy-ticket" class="btn btn-ghost">
+                  <span data-i18n="support.btnCopyFormatted">Copy Formatted Ticket to Clipboard</span>
+                </button>
+              </div>
+
+              <p class="ticket-privacy-note" data-i18n="support.ticketPrivacyNote">
+                🔒 Zero background telemetry: only the fields you explicitly send above are shared with <code>developerhoangtruong@gmail.com</code>.
+              </p>
+            </form>
+          </div>
+
+          <!-- Right Column: 4. Support Indie Development Card & Direct Contact Info -->
+          <aside class="support-sidebar">
+            <!-- Support Indie Development Card -->
+            <div class="glass-card specular-top indie-support-card">
+              <span class="badge badge-store" data-i18n="support.indieBadge">Independent Windows Craft</span>
+              <h3 class="card-title" data-i18n="support.indieTitle">Support MTD Studio Indie Development</h3>
+              <p class="card-desc" data-i18n="support.indieDesc">
+                Every MTD Studio app is crafted with native Windows performance, Smoked Liquid Glass aesthetics, zero ads, and zero cloud tracking. If our utilities save you time every day, consider buying the developer a coffee or leaving a 5★ review!
+              </p>
+
+              <div class="indie-cta-stack">
+                <a
+                  href="https://paypal.me/Developerhoangtruong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-paypal"
+                  data-i18n="support.btnBuyCoffee"
+                >
+                  Buy MTD Studio a Coffee via PayPal
+                </a>
+
+                <a
+                  href="ms-windows-store://review/?ProductId=9PC7TTDCCN2V"
+                  class="btn btn-secondary"
+                  data-i18n="support.btnRateStore"
+                >
+                  ⭐⭐⭐⭐Rate 5★ on Microsoft Store
+                </a>
+              </div>
+
+              <div class="policy-disclaimer-box">
+                <strong data-i18n="support.policy1087Title">Microsoft Store Policy 10.8.7 Disclosure:</strong>
+                <p data-i18n="support.policy1087Text">
+                  Contributions via PayPal (<code>paypal.me/Developerhoangtruong</code>) are 100% voluntary tips to support independent software development. Voluntary tips do not unlock in-app Pro features or digital goods; all Pro Lifetime licenses are purchased and managed exclusively through the official Microsoft Store in-app commerce API.
+                </p>
+              </div>
+            </div>
+
+            <!-- Direct Channels & Local Diagnostic Reference Card -->
+            <div class="glass-card direct-channels-card">
+              <h3 class="card-title" data-i18n="support.directChannelsTitle">Direct Support &amp; Local Paths</h3>
+              <ul class="channel-list">
+                <li>
+                  <span class="channel-label">Official Support Email:</span>
+                  <a href="mailto:developerhoangtruong@gmail.com" class="channel-link">developerhoangtruong@gmail.com</a>
+                </li>
+                <li>
+                  <span class="channel-label">Flagship Store ID:</span>
+                  <code>9PC7TTDCCN2V</code> (<a href="https://apps.microsoft.com/detail/9PC7TTDCCN2V" target="_blank" rel="noopener noreferrer">Web Store Listing</a>)
+                </li>
+                <li>
+                  <span class="channel-label">QAS Diagnostic Logs:</span>
+                  <code>%LocalAppData%\QuickAudioSwitcher\logs\diagnostic.log</code>
+                </li>
+                <li>
+                  <span class="channel-label">QAS Settings JSON:</span>
+                  <code>%LocalAppData%\QuickAudioSwitcher\settings.json</code>
+                </li>
+                <li>
+                  <span class="channel-label">Privacy &amp; Data Deletion:</span>
+                  <a href="privacy.html#quick-audio-switcher">View Partner Center Privacy Policy →</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast-notice" class="toast-notice" role="status" aria-live="polite" aria-atomic="true">
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Shared Smoked Liquid Glass Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-link">
+          <img src="assets/logo.png" alt="MTD Studio Logo" class="brand-logo" width="32" height="32" />
+          <span class="brand-name">MTD Studio</span>
+        </a>
+        <p class="footer-desc" data-i18n="footer.tagline">
+          High-craft native Windows 11 utilities designed with Smoked Liquid Glass and 100% local-first privacy.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colProducts">Products</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#products">Quick Audio Switcher v3.4.2</a></li>
+          <li><a href="index.html#products">Daily Habit Tracker (HabitGrid)</a></li>
+          <li><a href="index.html#products">Batch File Renamer</a></li>
+          <li><a href="index.html#products">Quick Invoice Maker</a></li>
+          <li><a href="index.html#products">AuraDesk</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colResources">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="docs.html" data-i18n="nav.docs">Docs &amp; API</a></li>
+          <li><a href="support.html" data-i18n="nav.support">Support Center</a></li>
+          <li><a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a></li>
+          <li><a href="privacy.html#quick-audio-switcher">Quick Audio Switcher Privacy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colLegal">Privacy &amp; Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:developerhoangtruong@gmail.com">developerhoangtruong@gmail.com</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PC7TTDCCN2V" target="_blank" rel="noopener noreferrer">Microsoft Store Page</a></li>
+          <li><a href="https://paypal.me/Developerhoangtruong" target="_blank" rel="noopener noreferrer">PayPal Tip Jar (Voluntary)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p data-i18n="footer.rights">© 2026 MTD Studio. All rights reserved. Microsoft, Windows, and the Microsoft Store logo are trademarks of Microsoft Corporation.</p>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

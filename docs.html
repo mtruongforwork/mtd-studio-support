@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Audio Switcher v3.4 User Guide, Elgato Stream Deck &amp; Local API Docs — MTD Studio</title>
+  <meta name="description" content="Complete user guide for Quick Audio Switcher v3.4 Smoked Liquid Glass desktop surfaces (Dynamic Island, Unified 3-in-1 Taskbar Dock, Side Edge Notch, Global Shortcuts), Elgato Stream Deck 1-Click Plugin setup, and Local REST &amp; WebSocket API Reference (127.0.0.1:49152)." />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="docs">
+  <!-- Ambient Background Glow Orbs -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb orb-cyan"></div>
+    <div class="glow-orb orb-violet"></div>
+    <div class="glow-orb orb-blue"></div>
+  </div>
+
+  <!-- Sticky Smoked Liquid Glass Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" aria-label="MTD Studio Home">
+        <img src="assets/logo.png" alt="MTD Studio Logo" class="brand-logo" width="36" height="36" />
+        <div class="brand-text brand-meta">
+          <span class="brand-name">MTD Studio</span>
+          <span class="brand-tag" data-i18n="nav.brandTag">Official Microsoft Store Publisher</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link" data-i18n="nav.products">Products</a>
+        <a href="docs.html" class="nav-link active" aria-current="page" data-i18n="nav.docs">Docs &amp; API</a>
+        <a href="support.html" class="nav-link" data-i18n="nav.support">Support Center</a>
+        <a href="privacy.html" class="nav-link" data-i18n="nav.privacy">Privacy Policy</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn active" data-lang="en" onclick="window.setMtdLanguage && window.setMtdLanguage('en')">EN</button>
+          <button type="button" class="lang-btn" data-lang="vi" onclick="window.setMtdLanguage && window.setMtdLanguage('vi')">VI</button>
+        </div>
+        <a href="https://paypal.me/Developerhoangtruong" target="_blank" rel="noopener noreferrer" class="btn btn-paypal btn-sm" data-i18n="nav.donate">
+          Buy a Coffee
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero hero-compact">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          <span data-i18n="docs.heroBadge">Quick Audio Switcher v3.4.2 · Smoked Liquid Glass Engine · Loopback REST &amp; WebSocket API</span>
+        </div>
+        <h1 class="hero-title" data-i18n="docs.heroTitle">Quick Audio Switcher v3.4 User Guide &amp; Developer API</h1>
+        <p class="hero-subtitle" data-i18n="docs.heroSubtitle">
+          Master every desktop surface, mouse gesture, tab-avoidance shortcut, Elgato Stream Deck integration, and local loopback automation endpoint.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#surfaces-guide" class="btn btn-primary" data-i18n="docs.ctaSurfaces">Surface &amp; Gesture Guide</a>
+          <a href="#streamdeck-setup" class="btn btn-secondary" data-i18n="docs.ctaStreamDeck">Stream Deck 1-Click Setup</a>
+          <a href="#api-reference" class="btn btn-ghost" data-i18n="docs.ctaApi">REST &amp; WebSocket API (127.0.0.1:49152)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. v3.4 Smoked Liquid Glass Surface & Gesture Guide -->
+    <section id="surfaces-guide" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-pro" data-i18n="docs.surfacesTag">Smoked Liquid Glass Architecture</span>
+          <h2 class="section-title" data-i18n="docs.surfacesTitle">v3.4 Desktop Surfaces, Gestures &amp; Shortcuts</h2>
+          <p class="section-subtitle" data-i18n="docs.surfacesSubtitle">
+            Designed for 120fps fluid response with zero mouse interference over maximized browser tabs and fullscreen games.
+          </p>
+        </div>
+
+        <div class="docs-grid surfaces-bento-grid">
+          <!-- Card 1: Dynamic Island (4 Tabs) & Tab-Avoidance -->
+          <article class="glass-card glass-card-interactive specular-top surface-guide-card">
+            <div class="card-top-meta">
+              <span class="badge badge-pro">Surface 01 · Top Center / Draggable</span>
+              <span class="badge badge-store">120fps Spring Physics</span>
+            </div>
+            <h3 class="card-title" data-i18n="docs.islandCardTitle">Dynamic Island (4 Tabs: Controls · Calendar · Devices · Music) &amp; Tab-Avoidance</h3>
+            <p class="card-desc" data-i18n="docs.islandCardDesc">
+              A unified frosted Liquid Glass segmented pill at the top of your display with adaptive 5-bar spectrum equalizer, side-by-side Master Volume (`60%`) + Display Brightness (`40%`) frosted capsules, and the compact `[ ✦ Audio Studio › ]` sub-panel drawer.
+            </p>
+            <ul class="gesture-list">
+              <li>
+                <strong><code>Hold Alt</code> (Ghost Mode Click-Through):</strong> Drops island opacity to <code>0.22</code> and enables 100% OS mouse click-through so you can click or drag browser tabs directly underneath without moving the island.
+              </li>
+              <li>
+                <strong>Drag Left / Right Along Top Edge:</strong> Click and drag the resting pill horizontally to park it anywhere along the top screen edge.
+              </li>
+              <li>
+                <strong>Right-Click Context Menu:</strong> Quick actions for <em>Hide for 5 seconds</em>, <em>Full Hardware Sync</em>, or <em>Reset to center</em>.
+              </li>
+              <li>
+                <strong>4-Tab Unified Segmented Dock:</strong> Switch effortlessly between <strong>Controls</strong> (2×2 WinRT Wi-Fi/BT/Output/Notch tiles + Dual Volume/Brightness + Audio Studio), <strong>Calendar</strong> (Agenda &amp; Pomodoro Focus Timer), <strong>Devices</strong> (Instant Output/Input &amp; Spatial Audio), and <strong>Music</strong> (GSMTC Media Session &amp; Album Art Glow).
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 2: Unified 3-in-1 Taskbar Dock (316x34) -->
+          <article class="glass-card glass-card-interactive specular-top surface-guide-card">
+            <div class="card-top-meta">
+              <span class="badge badge-pro">Surface 02 · Taskbar Companion</span>
+              <span class="badge badge-free">316 × 34 px Capsule</span>
+            </div>
+            <h3 class="card-title" data-i18n="docs.dockCardTitle">Unified 3-in-1 Taskbar Dock (316×34)</h3>
+            <p class="card-desc" data-i18n="docs.dockCardDesc">
+              Replaces three separate desktop widgets with one ultra-compact Smoked Liquid Glass capsule docked cleanly beside your Windows 11 system tray.
+            </p>
+            <div class="dock-anatomy-diagram" aria-label="Unified 3-in-1 Taskbar Dock Zones">
+              <div class="dock-zone zone-left">
+                <span class="zone-pill live-dot">● LIVE</span>
+                <span class="zone-caption">Left: 1-Click Mic Toggle</span>
+              </div>
+              <div class="dock-zone zone-mid">
+                <span class="zone-pill spectrum-bars">▮▃▆█▇▂▅█▃▆▂▄▇▃▅</span>
+                <span class="zone-caption">Middle: 16-Bar Spectrum → Flyout</span>
+              </div>
+              <div class="dock-zone zone-right">
+                <span class="zone-pill vol-readout">🔊 68%</span>
+                <span class="zone-caption">Right: Swap / Mute / Scroll ±2%</span>
+              </div>
+            </div>
+            <ul class="gesture-list">
+              <li>
+                <strong>Left Zone <code>[● LIVE / MUTED]</code>:</strong> 1-click instant Microphone mute/unmute toggle with live WASAPI capture status indicator.
+              </li>
+              <li>
+                <strong>Middle Zone <code>[16-bar Spectrum]</code>:</strong> Real-time 60fps FFT audio spectrum visualizer; 1-click toggles the main Quick Audio Switcher Flyout.
+              </li>
+              <li>
+                <strong>Right Zone <code>[🔊 %]</code>:</strong> <strong>Left-click</strong> cycles output device (Speakers ↔ Headset), <strong>Right-click</strong> toggles master output mute, and <strong>Mouse Scroll Wheel</strong> adjusts master volume in crisp <code>±2%</code> steps.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 3: Side Edge Notch -->
+          <article class="glass-card glass-card-interactive specular-top surface-guide-card">
+            <div class="card-top-meta">
+              <span class="badge badge-pro">Surface 03 · Zero-Footprint Edge</span>
+              <span class="badge badge-store">10px Resting Handle</span>
+            </div>
+            <h3 class="card-title" data-i18n="docs.edgeCardTitle">Side Edge Notch (10px Resting Handle)</h3>
+            <p class="card-desc" data-i18n="docs.edgeCardDesc">
+              Ideal for competitive gamers and multi-monitor workstations who want zero top-edge overlap while keeping instant tactile audio control on the screen border.
+            </p>
+            <ul class="gesture-list">
+              <li>
+                <strong>Direct Scroll Wheel on Resting <code>10px</code> Handle:</strong> Roll your mouse wheel up or down right on the slim <code>10px</code> edge handle to adjust volume by <code>±2%</code> without even expanding the drawer.
+              </li>
+              <li>
+                <strong>Hover / Click Expansion:</strong> Glides open a frosted Liquid Glass vertical control strip with <strong>1-Click Mic Mute</strong>, <strong>Quick Output Swap</strong>, and live volume telemetry.
+              </li>
+              <li>
+                <strong>Fullscreen Game Guard:</strong> Automatically stays out of the way during exclusive fullscreen DirectX/Vulkan games while keeping global hotkeys active.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card 4: Global Shortcuts & Per-App Hover Wheel -->
+          <article class="glass-card glass-card-interactive specular-top surface-guide-card">
+            <div class="card-top-meta">
+              <span class="badge badge-free">Zero-Latency Hotkeys</span>
+              <span class="badge badge-pro">Customizable in Settings</span>
+            </div>
+            <h3 class="card-title" data-i18n="docs.shortcutsCardTitle">Global Keyboard &amp; Mouse Wheel Shortcuts</h3>
+            <p class="card-desc" data-i18n="docs.shortcutsCardDesc">
+              Control per-application audio sessions, cycle headsets, or summon the Command Palette from anywhere in Windows without alt-tabbing out of your work or game.
+            </p>
+            <div class="shortcuts-table-wrap">
+              <table class="shortcuts-table">
+                <thead>
+                  <tr>
+                    <th>Shortcut</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>Alt</kbd> + <kbd>Mouse Wheel</kbd></td>
+                    <td>Adjust <strong>per-app volume</strong> of the hovered or focused window directly</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>Hold Alt</kbd></td>
+                    <td>Dynamic Island <strong>Ghost Mode</strong> (<code>Opacity 0.22</code> + mouse click-through)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd></td>
+                    <td>Toggle Main Quick Audio Switcher Flyout</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>M</kbd></td>
+                    <td>Instant Microphone Mute / Unmute (with OSD Cue)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd></td>
+                    <td>Cycle Default Audio Output Device (e.g. Speakers ↔ Headset)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd></td>
+                    <td>Open Spotlight-Style Audio Command Palette</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>W</kbd></td>
+                    <td>Summon Radial Audio Wheel at Mouse Cursor</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Elgato Stream Deck 1-Click Setup Guide -->
+    <section id="streamdeck-setup" class="section-block">
+      <div class="container">
+        <div class="glass-card specular-top streamdeck-guide-card">
+          <div class="streamdeck-grid">
+            <div class="streamdeck-info">
+              <span class="badge badge-pro" data-i18n="docs.sdTag">Hardware Creator Integration</span>
+              <h2 class="section-title" data-i18n="docs.sdTitle">Elgato Stream Deck 1-Click Setup Guide</h2>
+              <p class="section-subtitle" data-i18n="docs.sdSubtitle">
+                Control output switching, per-app volume dials, Chat-Mix balance, Mic Lock, and Audio Profiles with live dynamic OLED key icons on Stream Deck MK.2, XL, Mini, Neo, and Stream Deck + rotary dials.
+              </p>
+
+              <ol class="sd-steps-list">
+                <li>
+                  <span class="sd-step-badge">Step 1</span>
+                  <div>
+                    <strong>Open Integrations &amp; API Settings</strong>
+                    <p>Launch Quick Audio Switcher v3.4, click the <strong>Settings (Gear Icon)</strong>, and navigate to the <strong>Integrations &amp; API</strong> tab.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="sd-step-badge">Step 2</span>
+                  <div>
+                    <strong>Click "Install Stream Deck Plugin"</strong>
+                    <p>
+                      Clicking <strong><code>Install Stream Deck Plugin</code></strong> automatically enables the loopback Local Control Server on <code>http://127.0.0.1:49152</code> and launches the bundled <code>com.mtdstudio.quickaudioswitcher.streamDeckPlugin</code> package into your Elgato Stream Deck software.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span class="sd-step-badge">Step 3</span>
+                  <div>
+                    <strong>Drag Actions to Your Keys &amp; Dials</strong>
+                    <p>
+                      In the Elgato Stream Deck app, find the <strong>Quick Audio Switcher</strong> category in the right sidebar and drag <em>Toggle Output Device</em>, <em>Mic Mute Guard</em>, <em>App Volume Dial (Spotify/Discord/Game)</em>, <em>Chat-Mix Balance</em>, or <em>Apply Audio Profile</em> onto any key or rotary encoder.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+
+              <div class="url-copy-box sd-plugin-box">
+                <div class="path-meta">
+                  <span class="path-label">Bundled Plugin Identifier &amp; Loopback Host:</span>
+                  <code>com.mtdstudio.quickaudioswitcher.streamDeckPlugin · http://127.0.0.1:49152</code>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm copy-btn"
+                  data-copy-code="http://127.0.0.1:49152"
+                >
+                  Copy Loopback Host URL
+                </button>
+              </div>
+            </div>
+
+            <div class="streamdeck-visual">
+              <img
+                src="assets/screenshots/shot_5_streamdeck.png"
+                alt="Elgato Stream Deck Plugin and Local REST/WebSocket API in Quick Audio Switcher v3.4"
+                class="sd-preview-img"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Complete Local REST & WebSocket API Reference (http://127.0.0.1:49152) -->
+    <section id="api-reference" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-store" data-i18n="docs.apiTag">Loopback Automation API · 127.0.0.1:49152</span>
+          <h2 class="section-title" data-i18n="docs.apiTitle">Complete Local REST &amp; WebSocket API Reference</h2>
+          <p class="section-subtitle" data-i18n="docs.apiSubtitle">
+            Automate Windows audio from Elgato Stream Deck, Touch Portal, AutoHotkey, Node-RED, macro pads, or custom scripts. Strictly bound to <code>127.0.0.1</code> (localhost loopback) for 100% network safety. If Bearer Token authentication is enabled in Settings, pass <code>Authorization: Bearer &lt;YOUR_TOKEN&gt;</code>.
+          </p>
+        </div>
+
+        <div class="docs-grid api-endpoints-grid">
+          <!-- Endpoint 1: GET /api/v1/status -->
+          <article class="glass-card specular-top endpoint-card">
+            <div class="endpoint-header">
+              <div class="endpoint-route">
+                <span class="method-badge method-get">GET</span>
+                <code class="endpoint-path">/api/v1/status</code>
+              </div>
+              <span class="badge badge-free">Telemetry &amp; State</span>
+            </div>
+            <p class="endpoint-desc">
+              Returns current master output/input devices, volume percentage, mute states, active Audio Studio toggles (Auto-Duck, Spatial 3D, Safe Vol, Solo Focus, Call Autopilot), and active profile.
+            </p>
+            <div class="code-block-wrap">
+              <div class="code-toolbar">
+                <span class="code-lang">HTTP Loopback Request</span>
+                <div class="code-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm copy-btn"
+                    data-copy-code="curl -s http://127.0.0.1:49152/api/v1/status"
+                  >
+                    📋 Copy curl
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-sm copy-btn"
+                    data-copy-code="Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/status' -Method Get"
+                  >
+                    ⚡ Copy PowerShell
+                  </button>
+                </div>
+              </div>
+              <pre class="code-block"><code># curl
+curl -s http://127.0.0.1:49152/api/v1/status
+
+# PowerShell
+Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/status' -Method Get</code></pre>
+            </div>
+          </article>
+
+          <!-- Endpoint 2: GET /api/v1/devices -->
+          <article class="glass-card specular-top endpoint-card">
+            <div class="endpoint-header">
+              <div class="endpoint-route">
+                <span class="method-badge method-get">GET</span>
+                <code class="endpoint-path">/api/v1/devices</code>
+              </div>
+              <span class="badge badge-free">Device Discovery</span>
+            </div>
+            <p class="endpoint-desc">
+              Lists all active Windows Core Audio playback (render) and recording (capture) endpoints with their <code>deviceId</code>, friendly name, default state, and current volume level.
+            </p>
+            <div class="code-block-wrap">
+              <div class="code-toolbar">
+                <span class="code-lang">HTTP Loopback Request</span>
+                <div class="code-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm copy-btn"
+                    data-copy-code="curl -s http://127.0.0.1:49152/api/v1/devices"
+                  >
+                    📋 Copy curl
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-sm copy-btn"
+                    data-copy-code="Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/devices' -Method Get"
+                  >
+                    ⚡ Copy PowerShell
+                  </button>
+                </div>
+              </div>
+              <pre class="code-block"><code># curl
+curl -s http://127.0.0.1:49152/api/v1/devices
+
+# PowerShell
+Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/devices' -Method Get</code></pre>
+            </div>
+          </article>
+
+          <!-- Endpoint 3: POST /api/v1/devices/switch -->
+          <article class="glass-card specular-top endpoint-card">
+            <div class="endpoint-header">
+              <div class="endpoint-route">
+                <span class="method-badge method-post">POST</span>
+                <code class="endpoint-path">/api/v1/devices/switch</code>
+              </div>
+              <span class="badge badge-pro">Endpoint Switching</span>
+            </div>
+            <p class="endpoint-desc">
+              Switches the default Windows Multimedia &amp; Communications audio endpoint to the specified <code>deviceId</code> (or cycles favorite output devices if omitted).
+            </p>
+            <div class="code-block-wrap">
+              <div class="code-toolbar">
+                <span class="code-lang">JSON Payload: <code>{"deviceId": "..."}</code></span>
+                <div class="code-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm copy-btn"
+                    data-copy-code="curl -X POST http://127.0.0.1:49152/api/v1/devices/switch -H &quot;Content-Type: application/json&quot; -d '{&quot;deviceId&quot;: &quot;{0.0.0.00000000}.{d4a8e9c1-1234-4b56-89ab-cdef01234567}&quot;}'"
+                  >
+                    📋 Copy curl
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-sm copy-btn"
+                    data-copy-code="Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/devices/switch' -Method Post -ContentType 'application/json' -Body '{&quot;deviceId&quot;:&quot;{0.0.0.00000000}.{d4a8e9c1-1234-4b56-89ab-cdef01234567}&quot;}'"
+                  >
+                    ⚡ Copy PowerShell
+                  </button>
+                </div>
+              </div>
+              <pre class="code-block"><code># curl
+curl -X POST http://127.0.0.1:49152/api/v1/devices/switch \
+  -H "Content-Type: application/json" \
+  -d '{"deviceId": "{0.0.0.00000000}.{d4a8e9c1-1234-4b56-89ab-cdef01234567}"}'
+
+# PowerShell
+Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/devices/switch' `
+  -Method Post -ContentType 'application/json' `
+  -Body '{"deviceId":"{0.0.0.00000000}.{d4a8e9c1-1234-4b56-89ab-cdef01234567}"}'</code></pre>
+            </div>
+          </article>
+
+          <!-- Endpoint 4: POST /api/v1/devices/toggle-mute -->
+          <article class="glass-card specular-top endpoint-card">
+            <div class="endpoint-header">
+              <div class="endpoint-route">
+                <span class="method-badge method-post">POST</span>
+                <code class="endpoint-path">/api/v1/devices/toggle-mute</code>
+              </div>
+              <span class="badge badge-free">Mute Control</span>
+            </div>
+            <p class="endpoint-desc">
+              Toggles mute state for either the default playback speaker/headset (<code>"role": "render"</code>) or default microphone (<code>"role": "capture"</code>) and returns the new boolean mute status.
+            </p>
+            <div class="code-block-wrap">
+              <div class="code-toolbar">
+                <span class="code-lang">JSON Payload: <code>{"role": "render" | "capture"}</code></span>
+                <div class="code-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm copy-btn"
+                    data-copy-code="curl -X POST http://127.0.0.1:49152/api/v1/devices/toggle-mute -H &quot;Content-Type: application/json&quot; -d '{&quot;role&quot;: &quot;capture&quot;}'"
+                  >
+                    📋 Copy curl
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-sm copy-btn"
+                    data-copy-code="Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/devices/toggle-mute' -Method Post -ContentType 'application/json' -Body '{&quot;role&quot;:&quot;capture&quot;}'"
+                  >
+                    ⚡ Copy PowerShell
+                  </button>
+                </div>
+              </div>
+              <pre class="code-block"><code># curl (Toggle Microphone Mute)
+curl -X POST http://127.0.0.1:49152/api/v1/devices/toggle-mute \
+  -H "Content-Type: application/json" \
+  -d '{"role": "capture"}'
+
+# PowerShell
+Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/devices/toggle-mute' `
+  -Method Post -ContentType 'application/json' -Body '{"role":"capture"}'</code></pre>
+            </div>
+          </article>
+
+          <!-- Endpoint 5: GET /api/v1/sessions -->
+          <article class="glass-card specular-top endpoint-card">
+            <div class="endpoint-header">
+              <div class="endpoint-route">
+                <span class="method-badge method-get">GET</span>
+                <code class="endpoint-path">/api/v1/sessions</code>
+              </div>
+              <span class="badge badge-pro">Per-App Mixer</span>
+            </div>
+            <p class="endpoint-desc">
+              Lists all active per-application WASAPI audio sessions (e.g., <code>spotify</code>, <code>discord</code>, <code>chrome</code>, <code>cs2</code>) along with their process ID, volume scalar (<code>0.0</code>–<code>1.0</code>), mute state, and routed output endpoint.
+            </p>
+            <div class="code-block-wrap">
+              <div class="code-toolbar">
+                <span class="code-lang">HTTP Loopback Request</span>
+                <div class="code-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm copy-btn"
+                    data-copy-code="curl -s http://127.0.0.1:49152/api/v1/sessions"
+                  >
+                    📋 Copy curl
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-sm copy-btn"
+                    data-copy-code="Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/sessions' -Method Get"
+                  >
+                    ⚡ Copy PowerShell
+                  </button>
+                </div>
+              </div>
+              <pre class="code-block"><code># curl
+curl -s http://127.0.0.1:49152/api/v1/sessions
+
+# PowerShell
+Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/sessions' -Method Get</code></pre>
+            </div>
+          </article>
+
+          <!-- Endpoint 6: POST /api/v1/sessions/volume -->
+          <article class="glass-card specular-top endpoint-card">
+            <div class="endpoint-header">
+              <div class="endpoint-route">
+                <span class="method-badge method-post">POST</span>
+                <code class="endpoint-path">/api/v1/sessions/volume</code>
+              </div>
+              <span class="badge badge-pro">Per-App Volume</span>
+            </div>
+            <p class="endpoint-desc">
+              Sets the normalized volume level (<code>0.0</code> to <code>1.0</code>) for a specific application by <code>processName</code> (or <code>pid</code>) without affecting master system volume.
+            </p>
+            <div class="code-block-wrap">
+              <div class="code-toolbar">
+                <span class="code-lang">JSON Payload: <code>{"processName": "spotify", "volume": 0.65}</code></span>
+                <div class="code-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm copy-btn"
+                    data-copy-code="curl -X POST http://127.0.0.1:49152/api/v1/sessions/volume -H &quot;Content-Type: application/json&quot; -d '{&quot;processName&quot;: &quot;spotify&quot;, &quot;volume&quot;: 0.65}'"
+                  >
+                    📋 Copy curl
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-sm copy-btn"
+                    data-copy-code="Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/sessions/volume' -Method Post -ContentType 'application/json' -Body '{&quot;processName&quot;:&quot;spotify&quot;,&quot;volume&quot;:0.65}'"
+                  >
+                    ⚡ Copy PowerShell
+                  </button>
+                </div>
+              </div>
+              <pre class="code-block"><code># curl (Set Spotify to 65%)
+curl -X POST http://127.0.0.1:49152/api/v1/sessions/volume \
+  -H "Content-Type: application/json" \
+  -d '{"processName": "spotify", "volume": 0.65}'
+
+# PowerShell
+Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/sessions/volume' `
+  -Method Post -ContentType 'application/json' `
+  -Body '{"processName":"spotify","volume":0.65}'</code></pre>
+            </div>
+          </article>
+
+          <!-- Endpoint 7: GET & POST /api/v1/chatmix -->
+          <article class="glass-card specular-top endpoint-card">
+            <div class="endpoint-header">
+              <div class="endpoint-route">
+                <span class="method-badge method-get">GET</span>
+                <span class="method-badge method-post">POST</span>
+                <code class="endpoint-path">/api/v1/chatmix</code>
+              </div>
+              <span class="badge badge-pro">Game / Chat Balance</span>
+            </div>
+            <p class="endpoint-desc">
+              Reads or adjusts the real-time Game vs. Voice Chat balance slider (<code>-1.0</code> full Game focus to <code>+1.0</code> full Voice Chat focus, <code>0.0</code> neutral center).
+            </p>
+            <div class="code-block-wrap">
+              <div class="code-toolbar">
+                <span class="code-lang">JSON Payload: <code>{"balance": -0.35}</code></span>
+                <div class="code-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm copy-btn"
+                    data-copy-code="curl -X POST http://127.0.0.1:49152/api/v1/chatmix -H &quot;Content-Type: application/json&quot; -d '{&quot;balance&quot;: -0.35}'"
+                  >
+                    📋 Copy curl
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-sm copy-btn"
+                    data-copy-code="Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/chatmix' -Method Post -ContentType 'application/json' -Body '{&quot;balance&quot;:-0.35}'"
+                  >
+                    ⚡ Copy PowerShell
+                  </button>
+                </div>
+              </div>
+              <pre class="code-block"><code># GET current Chat-Mix balance
+curl -s http://127.0.0.1:49152/api/v1/chatmix
+
+# POST new Chat-Mix balance (-0.35 toward Game audio)
+curl -X POST http://127.0.0.1:49152/api/v1/chatmix \
+  -H "Content-Type: application/json" \
+  -d '{"balance": -0.35}'
+
+# PowerShell
+Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/chatmix' `
+  -Method Post -ContentType 'application/json' -Body '{"balance":-0.35}'</code></pre>
+            </div>
+          </article>
+
+          <!-- Endpoint 8: POST /api/v1/profiles/apply -->
+          <article class="glass-card specular-top endpoint-card">
+            <div class="endpoint-header">
+              <div class="endpoint-route">
+                <span class="method-badge method-post">POST</span>
+                <code class="endpoint-path">/api/v1/profiles/apply</code>
+              </div>
+              <span class="badge badge-pro">Audio Presets</span>
+            </div>
+            <p class="endpoint-desc">
+              Activates a saved Audio Profile preset (e.g., <code>"Gaming"</code>, <code>"Streaming"</code>, <code>"Meetings"</code>, <code>"Late Night"</code>), applying output device, microphone level, per-app routing, and Audio Studio toggles in one atomic call.
+            </p>
+            <div class="code-block-wrap">
+              <div class="code-toolbar">
+                <span class="code-lang">JSON Payload: <code>{"profileName": "Gaming"}</code></span>
+                <div class="code-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm copy-btn"
+                    data-copy-code="curl -X POST http://127.0.0.1:49152/api/v1/profiles/apply -H &quot;Content-Type: application/json&quot; -d '{&quot;profileName&quot;: &quot;Gaming&quot;}'"
+                  >
+                    📋 Copy curl
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-sm copy-btn"
+                    data-copy-code="Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/profiles/apply' -Method Post -ContentType 'application/json' -Body '{&quot;profileName&quot;:&quot;Gaming&quot;}'"
+                  >
+                    ⚡ Copy PowerShell
+                  </button>
+                </div>
+              </div>
+              <pre class="code-block"><code># curl
+curl -X POST http://127.0.0.1:49152/api/v1/profiles/apply \
+  -H "Content-Type: application/json" \
+  -d '{"profileName": "Gaming"}'
+
+# PowerShell
+Invoke-RestMethod -Uri 'http://127.0.0.1:49152/api/v1/profiles/apply' `
+  -Method Post -ContentType 'application/json' -Body '{"profileName":"Gaming"}'</code></pre>
+            </div>
+          </article>
+
+          <!-- Endpoint 9: WS ws://127.0.0.1:49152/ws -->
+          <article class="glass-card specular-top endpoint-card endpoint-card-wide">
+            <div class="endpoint-header">
+              <div class="endpoint-route">
+                <span class="method-badge method-ws">WS</span>
+                <code class="endpoint-path">ws://127.0.0.1:49152/ws</code>
+              </div>
+              <span class="badge badge-store">Real-Time Bi-Directional Stream</span>
+            </div>
+            <p class="endpoint-desc">
+              Real-time push event stream broadcasting instant JSON telemetry whenever master volume, microphone mute state, active playback/capture devices, Chat-Mix balance, or per-app audio sessions change. Powers zero-polling OLED key &amp; rotary encoder updates on Elgato Stream Deck.
+            </p>
+            <div class="code-block-wrap">
+              <div class="code-toolbar">
+                <span class="code-lang">WebSocket Event Stream &amp; Client Subscription</span>
+                <div class="code-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm copy-btn"
+                    data-copy-code="curl --include --no-buffer -H &quot;Connection: Upgrade&quot; -H &quot;Upgrade: websocket&quot; -H &quot;Sec-WebSocket-Key: SGVsbG9XTWVkaWFTeXN0ZW0=&quot; -H &quot;Sec-WebSocket-Version: 13&quot; http://127.0.0.1:49152/ws"
+                  >
+                    📋 Copy curl
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-sm copy-btn"
+                    data-copy-code="$ws = [System.Net.WebSockets.ClientWebSocket]::new(); $ws.ConnectAsync([Uri]'ws://127.0.0.1:49152/ws', [Threading.CancellationToken]::None).Wait(); Write-Host 'Connected to QAS WebSocket ws://127.0.0.1:49152/ws'"
+                  >
+                    ⚡ Copy PowerShell
+                  </button>
+                </div>
+              </div>
+              <pre class="code-block"><code># Connect via curl WebSocket handshake
+curl --include --no-buffer \
+  -H "Connection: Upgrade" -H "Upgrade: websocket" \
+  -H "Sec-WebSocket-Key: SGVsbG9XTWVkaWFTeXN0ZW0=" \
+  -H "Sec-WebSocket-Version: 13" http://127.0.0.1:49152/ws
+
+# PowerShell (.NET ClientWebSocket)
+$ws = [System.Net.WebSockets.ClientWebSocket]::new()
+$ws.ConnectAsync([Uri]'ws://127.0.0.1:49152/ws', [Threading.CancellationToken]::None).Wait()
+
+# Example Real-Time Broadcast Payloads:
+{"event": "volume.changed", "role": "render", "volume": 0.68, "muted": false}
+{"event": "device.switched", "role": "render", "deviceId": "...", "name": "Headphones (Pro X)"}
+{"event": "session.updated", "processName": "spotify", "volume": 0.65, "muted": false}</code></pre>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast-notice" class="toast-notice" role="status" aria-live="polite" aria-atomic="true">
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Shared Smoked Liquid Glass Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-link">
+          <img src="assets/logo.png" alt="MTD Studio Logo" class="brand-logo" width="32" height="32" />
+          <span class="brand-name">MTD Studio</span>
+        </a>
+        <p class="footer-desc" data-i18n="footer.tagline">
+          High-craft native Windows 11 utilities designed with Smoked Liquid Glass and 100% local-first privacy.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colProducts">Products</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#products">Quick Audio Switcher v3.4.2</a></li>
+          <li><a href="index.html#products">Daily Habit Tracker (HabitGrid)</a></li>
+          <li><a href="index.html#products">Batch File Renamer</a></li>
+          <li><a href="index.html#products">Quick Invoice Maker</a></li>
+          <li><a href="index.html#products">AuraDesk</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colResources">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="docs.html" data-i18n="nav.docs">Docs &amp; API</a></li>
+          <li><a href="support.html" data-i18n="nav.support">Support Center</a></li>
+          <li><a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a></li>
+          <li><a href="privacy.html#quick-audio-switcher">Quick Audio Switcher Privacy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colLegal">Privacy &amp; Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:developerhoangtruong@gmail.com">developerhoangtruong@gmail.com</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PC7TTDCCN2V" target="_blank" rel="noopener noreferrer">Microsoft Store Page</a></li>
+          <li><a href="https://paypal.me/Developerhoangtruong" target="_blank" rel="noopener noreferrer">PayPal Tip Jar (Voluntary)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p data-i18n="footer.rights">© 2026 MTD Studio. All rights reserved. Microsoft, Windows, and the Microsoft Store logo are trademarks of Microsoft Corporation.</p>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

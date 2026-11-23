@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — MTD Studio (Microsoft Store Official Privacy Portal)</title>
+  <meta name="description" content="Official Microsoft Store Privacy Policy for MTD Studio applications: Quick Audio Switcher, Daily Habit Tracker Widget (HabitGrid), Batch File Renamer, Quick Invoice Maker, and AuraDesk. 100% local-first execution with zero personal data collection." />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="privacy">
+  <!-- Ambient Background Glow Orbs -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb orb-cyan"></div>
+    <div class="glow-orb orb-violet"></div>
+    <div class="glow-orb orb-blue"></div>
+  </div>
+
+  <!-- Sticky Smoked Liquid Glass Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" aria-label="MTD Studio Home">
+        <img src="assets/logo.png" alt="MTD Studio Logo" class="brand-logo" width="36" height="36" />
+        <div class="brand-text brand-meta">
+          <span class="brand-name">MTD Studio</span>
+          <span class="brand-tag" data-i18n="nav.brandTag">Official Microsoft Store Publisher</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link" data-i18n="nav.products">Products</a>
+        <a href="docs.html" class="nav-link" data-i18n="nav.docs">Docs &amp; API</a>
+        <a href="support.html" class="nav-link" data-i18n="nav.support">Support Center</a>
+        <a href="privacy.html" class="nav-link active" aria-current="page" data-i18n="nav.privacy">Privacy Policy</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn active" data-lang="en" onclick="window.setMtdLanguage && window.setMtdLanguage('en')">EN</button>
+          <button type="button" class="lang-btn" data-lang="vi" onclick="window.setMtdLanguage && window.setMtdLanguage('vi')">VI</button>
+        </div>
+        <a href="https://paypal.me/Developerhoangtruong" target="_blank" rel="noopener noreferrer" class="btn btn-paypal btn-sm" data-i18n="nav.donate">
+          Buy a Coffee
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Page Hero -->
+    <section class="hero container">
+      <div class="hero-badge">
+        <span class="dot status-dot" aria-hidden="true"></span>
+        <span data-i18n="privacy.eyebrow">Microsoft Partner Center Certified · GDPR &amp; CCPA Compliant</span>
+      </div>
+      <h1 class="hero-title" data-i18n="privacy.title">
+        MTD Studio Privacy Policy Portal
+      </h1>
+      <p class="hero-subtitle" data-i18n="privacy.subtitle">
+        Strict 100% local-first software architecture. We do not collect, store, transmit, or sell your personal data.
+      </p>
+      <div class="trust-strip trust-strip-3">
+        <div class="trust-item">
+          <span class="badge badge-store">POLICY 10.5</span>
+          <strong data-i18n="privacy.lastUpdated">Effective &amp; Last Updated: November 2026</strong>
+        </div>
+        <div class="trust-item">
+          <span class="badge badge-free">ZERO TELEMETRY</span>
+          <strong>No Analytics · No Ad SDKs · No Cloud Accounts</strong>
+        </div>
+        <div class="trust-item">
+          <span class="badge badge-pro">IARC 3+</span>
+          <strong>GDPR · CCPA/CPRA · COPPA Compliant</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner Center Quick-Copy Bar -->
+    <section class="container">
+      <div class="glass-card specular-top" id="partner-center-bar" style="margin-bottom: 1.5rem;">
+        <div class="url-copy-box" style="margin-bottom: 1rem;">
+          <strong data-i18n="privacy.copyLabel">Partner Center Privacy URL:</strong>
+          <code id="privacy-current-url" class="url-copy-display">https://mtdstudio.dev/privacy.html#all</code>
+          <button
+            type="button"
+            id="copy-privacy-url-btn"
+            class="btn btn-primary btn-sm"
+            data-copy-privacy-url
+            data-i18n="privacy.copyBtn"
+          >
+            Copy Privacy URL
+          </button>
+        </div>
+
+        <div class="pill-tabs" id="privacy-product-tabs" role="tablist" aria-label="Filter Privacy Policy by Product" style="margin-bottom: 0;">
+          <a href="#all" class="pill-tab active" role="tab" aria-selected="true" data-privacy-tab="all" data-product="all" data-i18n="privacy.filterAll">
+            All MTD Studio Apps
+          </a>
+          <a href="#quick-audio-switcher" class="pill-tab" role="tab" aria-selected="false" data-privacy-tab="quick-audio-switcher" data-product="quick-audio-switcher">
+            Quick Audio Switcher
+          </a>
+          <a href="#habitgrid" class="pill-tab" role="tab" aria-selected="false" data-privacy-tab="habitgrid" data-product="habitgrid">
+            Daily Habit Tracker / HabitGrid
+          </a>
+          <a href="#batch-file-renamer" class="pill-tab" role="tab" aria-selected="false" data-privacy-tab="batch-file-renamer" data-product="batch-file-renamer">
+            Batch File Renamer
+          </a>
+          <a href="#quick-invoice-maker" class="pill-tab" role="tab" aria-selected="false" data-privacy-tab="quick-invoice-maker" data-product="quick-invoice-maker">
+            Quick Invoice Maker
+          </a>
+          <a href="#auradesk" class="pill-tab" role="tab" aria-selected="false" data-privacy-tab="auradesk" data-product="auradesk">
+            AuraDesk
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Privacy Policy Layout -->
+    <section class="section-sm container">
+      <div class="privacy-layout">
+        <!-- Sidebar Navigation & Compliance Summary -->
+        <aside class="privacy-sidebar specular-top">
+          <h3>Policy Sections</h3>
+          <ul class="privacy-nav" aria-label="Privacy Policy Table of Contents">
+            <li><a href="#section-overview" class="active">1. Overview &amp; Zero Data Collection</a></li>
+            <li><a href="#section-products">2. Product-Specific Local Capabilities</a></li>
+            <li><a href="#quick-audio-switcher">• Quick Audio Switcher v3.4</a></li>
+            <li><a href="#habitgrid">• Daily Habit Tracker (HabitGrid)</a></li>
+            <li><a href="#batch-file-renamer">• Batch File Renamer</a></li>
+            <li><a href="#quick-invoice-maker">• Quick Invoice Maker</a></li>
+            <li><a href="#auradesk">• AuraDesk</a></li>
+            <li><a href="#section-billing">3. Microsoft Store IAP &amp; Licensing</a></li>
+            <li><a href="#section-donations">4. Optional Voluntary Donations</a></li>
+            <li><a href="#section-storage">5. Local Storage, Backup &amp; Deletion</a></li>
+            <li><a href="#section-children">6. Children's Privacy (IARC 3+)</a></li>
+            <li><a href="#section-contact">7. Contact Us</a></li>
+          </ul>
+        </aside>
+
+        <!-- Static English Privacy Policy Content (100% Static for Microsoft Partner Center Crawler Bot) -->
+        <div class="privacy-content" id="all">
+          <!-- Section 1: Overview & Zero Personal Data Collection -->
+          <article id="section-overview" class="policy-section specular-top">
+            <span class="badge badge-free">SECTION 01 · CORE GUARANTEE</span>
+            <h2>1. Overview &amp; Zero Personal Data Collection</h2>
+
+            <p>
+              MTD Studio ("we", "our", or "us") develops native Windows desktop utilities distributed through the official Microsoft Store, including <strong>Quick Audio Switcher</strong>, <strong>Daily Habit Tracker Widget (HabitGrid)</strong>, <strong>Batch File Renamer</strong>, <strong>Quick Invoice Maker</strong>, and <strong>AuraDesk</strong>. Every MTD Studio application is built on a strict <strong>100% Local-First Privacy Architecture</strong>.
+            </p>
+
+            <ul>
+              <li><strong>No Personal Data Collection:</strong> Our applications do NOT collect, transmit, harvest, store on external servers, or process any Personally Identifiable Information (PII), such as your name, email address, phone number, physical location, IP address, or biometric identifiers.</li>
+              <li><strong>No Telemetry or Analytics SDKs:</strong> We do NOT embed third-party analytics, crash-reporting trackers, fingerprinting scripts, or telemetry frameworks (no Google Analytics, no Application Insights, no Sentry, no Mixpanel).</li>
+              <li><strong>No Advertising or Data Selling/Sharing:</strong> Our apps contain zero advertisements and zero ad-tracking SDKs. We never sell, rent, trade, or share user data with any third party under GDPR, CCPA/CPRA, or any global privacy regulation.</li>
+              <li><strong>No Cloud Account Required:</strong> None of our applications require user registration, login credentials, or cloud synchronization to function. All user preferences, profiles, and files remain 100% on your local Windows computer.</li>
+            </ul>
+          </article>
+
+          <!-- Section 2: Product-Specific Local Processing & System Capabilities -->
+          <article id="section-products" class="policy-section specular-top">
+            <span class="badge badge-store">SECTION 02 · PRODUCT DISCLOSURES</span>
+            <h2>2. Product-Specific Local Processing &amp; System Capabilities</h2>
+
+            <p>
+              Because our Windows utilities interact with native operating system APIs to deliver hardware and desktop control, Microsoft Store Policy requires clear disclosure of how each capability is used. All processing described below happens <strong>100% locally in memory on your PC</strong>.
+            </p>
+          </article>
+
+          <!-- Product 2.1: Quick Audio Switcher (#quick-audio-switcher) -->
+          <article id="quick-audio-switcher" class="policy-section specular-top" data-product-section="quick-audio-switcher">
+            <span class="badge badge-pro">Store ID: 9PC7TTDCCN2V · Flagship v3.4.2.0</span>
+            <h2>2.1 Quick Audio Switcher — Sound &amp; Device Controller</h2>
+
+            <p>
+              <strong>Quick Audio Switcher</strong> is a native Windows 11/10 audio endpoint switcher, per-app volume mixer, Smoked Liquid Glass Dynamic Island, Unified 3-in-1 Taskbar Spectrum Dock, and Side Edge Notch controller. It accesses the following local Windows APIs strictly on-device:
+            </p>
+
+            <ul>
+              <li>
+                <strong>Windows Core Audio APIs (<code>WASAPI</code> / <code>MMDevice</code> / <code>AudioSessionControl</code>):</strong>
+                Used solely to enumerate local playback (render) and recording (capture) audio devices, switch default endpoints, adjust master and per-application volume/mute states, route application audio streams to user-selected physical devices, balance Game/Voice Chat-Mix, and render the real-time visualizer spectrum from instantaneous peak meter values (<code>IAudioMeterInformation</code>).
+              </li>
+              <li>
+                <strong>Microphone Activity State Detection (NEVER Records, Listens To, or Stores Audio):</strong>
+                Quick Audio Switcher queries the Windows microphone endpoint status (<code>IAudioEndpointVolume</code> and <code>IAudioSessionManager2</code>) <strong>exclusively</strong> to check whether the microphone endpoint is currently active or muted in order to show the live status badge (<code>[● LIVE]</code> / <code>[MUTED]</code>), toggle microphone mute on click/hotkey, enforce optional Mic Gain Lock, or automatically duck/pause background music during voice calls (Smart Auto-Duck &amp; Call Autopilot). <strong>Quick Audio Switcher NEVER records, listens to, captures, transcribes, stores, or transmits any microphone audio or voice data.</strong>
+              </li>
+              <li>
+                <strong>WinRT Radios &amp; System Controls (<code>Windows.Devices.Radios</code>, WMI &amp; DDC/CI):</strong>
+                Used strictly upon direct user click or slider drag in the Dynamic Island Command Center to toggle local Wi-Fi and Bluetooth radio states, read local battery percentage, and adjust monitor display brightness. No wireless network names (SSIDs), MAC addresses, geolocation coordinates, or paired device identifiers are ever collected or transmitted externally.
+              </li>
+              <li>
+                <strong>Now Playing Media Transport Controls (<code>GlobalSystemMediaTransportControlsSessionManager</code>):</strong>
+                Used locally to display the currently playing track title, artist, and album cover thumbnail inside the Dynamic Island Media tab and execute user-initiated Play/Pause/Next/Previous commands. Media metadata is held transiently in local memory and is never logged or transmitted.
+              </li>
+              <li>
+                <strong>Local Control Server for Elgato Stream Deck (<code>127.0.0.1</code> Loopback Only):</strong>
+                Quick Audio Switcher includes an optional local REST and WebSocket control server (<code>http://127.0.0.1:49152</code> / <code>ws://127.0.0.1:49152/ws</code>) for the official Elgato Stream Deck plugin and local user automation scripts. This server is <strong>disabled by default</strong>, binds strictly to the local loopback interface (<code>127.0.0.1</code> / <code>localhost</code>), is protected by a locally generated cryptographic Bearer token (<code>X-QAS-Token</code>), and is never exposed to external networks or the internet.
+              </li>
+            </ul>
+
+            <p>
+              <strong>Local Storage Path:</strong> Configuration is stored locally in <code>%LocalAppData%\QuickAudioSwitcher\settings.json</code> and optional local troubleshooting logs in <code>%LocalAppData%\QuickAudioSwitcher\logs\diagnostic.log</code> (never uploaded automatically).
+            </p>
+          </article>
+
+          <!-- Product 2.2: Daily Habit Tracker Widget / HabitGrid (#habitgrid) -->
+          <article id="habitgrid" class="policy-section specular-top" data-product-section="habitgrid">
+            <span class="badge badge-store">v3.2.0 · Productivity</span>
+            <h2>2.2 Daily Habit Tracker Widget (HabitGrid)</h2>
+
+            <p>
+              <strong>Daily Habit Tracker Widget (HabitGrid)</strong> is an offline desktop habit tracking grid, 365-day GitHub-style streak heatmap, and Pomodoro focus timer.
+            </p>
+
+            <ul>
+              <li>
+                <strong>100% Local-Only Data Storage in <code>%LocalAppData%</code>:</strong>
+                All habit definitions, daily check-in logs, streak heatmaps, personal notes, and Pomodoro timer settings are saved exclusively on your local storage drive inside <code>%LocalAppData%\HabitGrid\</code>.
+              </li>
+              <li>
+                <strong>Zero Cloud Sync or Behavioral Tracking:</strong>
+                Your daily routines, personal goals, and focus session histories are never uploaded to any cloud server or shared with third parties. You may export or import plain JSON backups locally at any time.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Product 2.3: Batch File Renamer (#batch-file-renamer) -->
+          <article id="batch-file-renamer" class="policy-section specular-top" data-product-section="batch-file-renamer">
+            <span class="badge badge-store">v2.4.0 · File Management</span>
+            <h2>2.3 Batch File Renamer</h2>
+
+            <p>
+              <strong>Batch File Renamer</strong> is a rule-based bulk file, folder, and photo renaming utility for Windows.
+            </p>
+
+            <ul>
+              <li>
+                <strong>User-Selected Local File System Processing Only:</strong>
+                The application accesses only the specific files and directories that you explicitly select via the Windows File/Folder Picker or drag-and-drop into the application window.
+              </li>
+              <li>
+                <strong>100% Local Metadata &amp; Undo History in <code>%LocalAppData%</code>:</strong>
+                All filename transformations, Regex evaluations, photo EXIF timestamp reads, saved rule presets, and 1-click undo rollback logs execute 100% locally and are stored in <code>%LocalAppData%\BatchFileRenamer\</code>. Neither your filenames nor your file contents are ever transmitted over the network.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Product 2.4: Quick Invoice Maker (#quick-invoice-maker) -->
+          <article id="quick-invoice-maker" class="policy-section specular-top" data-product-section="quick-invoice-maker">
+            <span class="badge badge-store">v2.1.0 · Business &amp; Finance</span>
+            <h2>2.4 Quick Invoice Maker</h2>
+
+            <p>
+              <strong>Quick Invoice Maker</strong> is an offline invoice, estimate, and PDF receipt generator for freelancers and small businesses.
+            </p>
+
+            <ul>
+              <li>
+                <strong>100% Local Financial &amp; Client Data in <code>%LocalAppData%</code>:</strong>
+                All company details, business logos, client names, billing addresses, catalog items, tax calculations, and invoice records are stored strictly on your local computer inside <code>%LocalAppData%\QuickInvoiceMaker\</code>.
+              </li>
+              <li>
+                <strong>Offline PDF Rendering:</strong>
+                PDF invoices and receipts are generated locally in memory and saved directly to the folder you select on your PC. MTD Studio never accesses, transmits, or stores any of your financial or client information.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Product 2.5: AuraDesk (#auradesk) -->
+          <article id="auradesk" class="policy-section specular-top" data-product-section="auradesk">
+            <span class="badge badge-store">v1.5.0 · Focus &amp; Workspace</span>
+            <h2>2.5 AuraDesk</h2>
+
+            <p>
+              <strong>AuraDesk</strong> is a smart desktop workspace launcher, offline ambient focus soundscape mixer, and productivity scratchpad.
+            </p>
+
+            <ul>
+              <li>
+                <strong>100% Local Workspace &amp; Audio Engine in <code>%LocalAppData%</code>:</strong>
+                All ambient audio layers are synthesized and mixed locally without internet streaming. All workspace launch profiles, scratchpad notes, and session timer preferences are stored exclusively in <code>%LocalAppData%\AuraDesk\</code>.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Section 3: Microsoft Store In-App Purchases & Trial Licensing -->
+          <article id="section-billing" class="policy-section specular-top">
+            <span class="badge badge-pro">SECTION 03 · COMMERCE &amp; LICENSING</span>
+            <h2>3. Microsoft Store In-App Purchases &amp; Trial Licensing</h2>
+
+            <p>
+              Our applications use the official <strong>Microsoft Store Commerce &amp; Licensing API (<code>Windows.Services.Store.StoreContext</code>)</strong> to manage free trials and one-time lifetime Pro upgrades (such as the Quick Audio Switcher $3.99 Pro Lifetime license).
+            </p>
+            <ul>
+              <li>
+                <strong>Handled Securely by Microsoft Store:</strong> All purchase transactions, billing details, tax calculations, and receipts are processed directly by Microsoft Corporation through your Microsoft Account.
+              </li>
+              <li>
+                <strong>Zero Access to Payment Details:</strong> MTD Studio never accesses, receives, processes, or stores your credit card number, bank account information, billing address, or Microsoft Account credentials. The app only queries Windows for a local cryptographic entitlement status indicating whether the Pro add-on license is active.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Section 4: Optional Voluntary Donations -->
+          <article id="section-donations" class="policy-section specular-top">
+            <span class="badge badge-free">SECTION 04 · POLICY 10.8.7 COMPLIANCE</span>
+            <h2>4. Optional Voluntary Donations</h2>
+
+            <p>
+              Our website and application support screens provide an optional external link to support independent development via PayPal (<a href="https://paypal.me/Developerhoangtruong" target="_blank" rel="noopener noreferrer">paypal.me/Developerhoangtruong</a>).
+            </p>
+            <ul>
+              <li>
+                <strong>Strictly Voluntary &amp; Does Not Unlock App Features:</strong> In accordance with Microsoft Store Policy 10.8.7, voluntary donations or coffee tips via PayPal are completely optional and do <strong>not</strong> unlock digital app features, Pro licenses, or exclusive in-app content. All commercial Pro features are unlocked exclusively via official Microsoft Store in-app purchases.
+              </li>
+              <li>
+                <strong>External Browser Processing:</strong> Clicking the voluntary donation link opens your external web browser to PayPal, where any transaction is governed by PayPal's own Privacy Policy.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Section 5: Local Data Storage, JSON Backup & Complete Deletion -->
+          <article id="section-storage" class="policy-section specular-top">
+            <span class="badge badge-store">SECTION 05 · DATA RETENTION &amp; DELETION</span>
+            <h2>5. Local Data Storage, JSON Backup &amp; Complete Deletion</h2>
+
+            <p>
+              Because MTD Studio applications operate 100% locally and do not maintain external user databases, you have immediate, complete control over exporting, backing up, or permanently deleting your data at any time:
+            </p>
+
+            <ul>
+              <li><strong>Quick Audio Switcher:</strong> <code>%LocalAppData%\QuickAudioSwitcher\</code> (<code>settings.json</code> and <code>logs\diagnostic.log</code>)</li>
+              <li><strong>Daily Habit Tracker Widget (HabitGrid):</strong> <code>%LocalAppData%\HabitGrid\</code> (local habit &amp; streak JSON/SQLite files)</li>
+              <li><strong>Batch File Renamer:</strong> <code>%LocalAppData%\BatchFileRenamer\</code> (saved rule presets &amp; local undo rollback history)</li>
+              <li><strong>Quick Invoice Maker:</strong> <code>%LocalAppData%\QuickInvoiceMaker\</code> (local invoice drafts, client address book &amp; settings)</li>
+              <li><strong>AuraDesk:</strong> <code>%LocalAppData%\AuraDesk\</code> (local workspace presets, ambient mixer profiles &amp; scratchpad notes)</li>
+            </ul>
+
+            <p>
+              <strong>Complete Data Deletion Procedure:</strong> To erase all data created by any MTD Studio app, uninstall the application via <em>Windows Settings → Apps → Installed Apps → Uninstall</em>, and/or open Windows Run (<kbd>Win + R</kbd>), enter <code>%LocalAppData%</code>, and delete the corresponding application folder listed above. Once deleted from your device, no copy exists anywhere else.
+            </p>
+          </article>
+
+          <!-- Section 6: Children's Privacy (IARC Everyone 3+ / COPPA) -->
+          <article id="section-children" class="policy-section specular-top">
+            <span class="badge badge-free">SECTION 06 · IARC EVERYONE 3+ / COPPA</span>
+            <h2>6. Children's Privacy (IARC Everyone 3+ / COPPA)</h2>
+
+            <p>
+              All MTD Studio utilities are general-audience desktop tools rated <strong>IARC Everyone (3+)</strong> on the Microsoft Store. We do not knowingly or unknowingly collect, solicit, or store personal information from children under the age of 13 (or under 16 in applicable jurisdictions), or from any user of any age, in full compliance with the U.S. Children's Online Privacy Protection Act (COPPA) and GDPR provisions for minors.
+            </p>
+          </article>
+
+          <!-- Section 7: Contact Us -->
+          <article id="section-contact" class="policy-section specular-top">
+            <span class="badge badge-pro">SECTION 07 · PUBLISHER CONTACT</span>
+            <h2>7. Contact Us</h2>
+
+            <p>
+              If you have any questions about this Privacy Policy, our zero-telemetry architecture, or Microsoft Store compliance disclosures, please contact us directly. If you send us a voluntary support email or diagnostic log, your email address and message are used solely to resolve your support request and are never shared or used for marketing.
+            </p>
+
+            <ul>
+              <li><strong>Publisher:</strong> MTD Studio (Hoang Truong)</li>
+              <li><strong>Email:</strong> <a href="mailto:developerhoangtruong@gmail.com">developerhoangtruong@gmail.com</a></li>
+              <li><strong>Support Center &amp; Ticket Portal:</strong> <a href="support.html">support.html</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast-notice" class="toast-notice" role="status" aria-live="polite" aria-atomic="true">
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Shared Smoked Liquid Glass Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-link">
+          <img src="assets/logo.png" alt="MTD Studio Logo" class="brand-logo" width="32" height="32" />
+          <span class="brand-name">MTD Studio</span>
+        </a>
+        <p class="footer-desc" data-i18n="footer.tagline">
+          High-craft native Windows 11 utilities designed with Smoked Liquid Glass and 100% local-first privacy.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colProducts">Products</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html#quick-audio-switcher">Quick Audio Switcher v3.4.2</a></li>
+          <li><a href="privacy.html#habitgrid">Daily Habit Tracker (HabitGrid)</a></li>
+          <li><a href="privacy.html#batch-file-renamer">Batch File Renamer</a></li>
+          <li><a href="privacy.html#quick-invoice-maker">Quick Invoice Maker</a></li>
+          <li><a href="privacy.html#auradesk">AuraDesk</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colResources">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="docs.html" data-i18n="nav.docs">Docs &amp; API</a></li>
+          <li><a href="support.html" data-i18n="nav.support">Support Center</a></li>
+          <li><a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a></li>
+          <li><a href="privacy.html#quick-audio-switcher">Quick Audio Switcher Privacy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colLegal">Privacy &amp; Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:developerhoangtruong@gmail.com">developerhoangtruong@gmail.com</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PC7TTDCCN2V" target="_blank" rel="noopener noreferrer">Microsoft Store Page</a></li>
+          <li><a href="https://paypal.me/Developerhoangtruong" target="_blank" rel="noopener noreferrer">PayPal Tip Jar (Voluntary)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p data-i18n="footer.rights">© 2026 MTD Studio. All rights reserved. Microsoft, Windows, and the Microsoft Store logo are trademarks of Microsoft Corporation.</p>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

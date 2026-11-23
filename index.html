@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTD Studio — High-Craft Windows 11 Utilities &amp; Quick Audio Switcher v3.4</title>
+  <meta name="description" content="Official Microsoft Store Publisher hub for MTD Studio. Native, ultra-fast Windows 11 desktop utilities designed in Smoked Liquid Glass with 100% local-first privacy and no subscriptions." />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="home">
+  <!-- Ambient Background Glow Orbs -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb orb-cyan"></div>
+    <div class="glow-orb orb-violet"></div>
+    <div class="glow-orb orb-blue"></div>
+  </div>
+
+  <!-- Sticky Smoked Liquid Glass Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" aria-label="MTD Studio Home">
+        <img src="assets/logo.png" alt="MTD Studio Logo" class="brand-logo" width="36" height="36" />
+        <div class="brand-text brand-meta">
+          <span class="brand-name">MTD Studio</span>
+          <span class="brand-tag" data-i18n="nav.brandTag">Official Microsoft Store Publisher</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active" aria-current="page" data-i18n="nav.products">Products</a>
+        <a href="docs.html" class="nav-link" data-i18n="nav.docs">Docs &amp; API</a>
+        <a href="support.html" class="nav-link" data-i18n="nav.support">Support Center</a>
+        <a href="privacy.html" class="nav-link" data-i18n="nav.privacy">Privacy Policy</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn active" data-lang="en" onclick="window.setMtdLanguage && window.setMtdLanguage('en')">EN</button>
+          <button type="button" class="lang-btn" data-lang="vi" onclick="window.setMtdLanguage && window.setMtdLanguage('vi')">VI</button>
+        </div>
+        <a href="https://paypal.me/Developerhoangtruong" target="_blank" rel="noopener noreferrer" class="btn btn-paypal btn-sm" data-i18n="nav.donate">
+          Buy a Coffee
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- 1. Hero Section -->
+    <section class="hero container">
+      <div class="hero-badge">
+        <span class="dot status-dot" aria-hidden="true"></span>
+        <span data-i18n="hero.badge">Official Microsoft Store Publisher · 100% Local-First Privacy · No Subscriptions</span>
+      </div>
+
+      <h1 class="hero-title" data-i18n="hero.title">
+        High-Craft Windows 11 Utilities by MTD Studio
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Native, ultra-fast desktop apps designed in Smoked Liquid Glass. Built for creators, streamers, and power users worldwide.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="ms-windows-store://pdp/?ProductId=9PC7TTDCCN2V" class="btn btn-primary btn-lg" data-i18n="hero.ctaPrimary">
+          Get Quick Audio Switcher v3.4
+        </a>
+        <a href="#products" class="btn btn-secondary btn-lg" data-i18n="hero.ctaSecondary">
+          Explore All 5 Apps
+        </a>
+        <a href="docs.html" class="btn btn-ghost btn-lg" data-i18n="hero.ctaDocs">
+          API &amp; Stream Deck Docs
+        </a>
+      </div>
+
+      <div class="trust-strip">
+        <div class="trust-item">
+          <span class="badge badge-store">STORE CERTIFIED</span>
+          <strong data-i18n="hero.trust1">100% Local-First Execution</strong>
+        </div>
+        <div class="trust-item">
+          <span class="badge badge-free">PRIVACY</span>
+          <strong data-i18n="hero.trust2">Zero Telemetry or Ads</strong>
+        </div>
+        <div class="trust-item">
+          <span class="badge badge-store">9PC7TTDCCN2V</span>
+          <strong data-i18n="hero.trust3">Microsoft Store Certified</strong>
+        </div>
+        <div class="trust-item">
+          <span class="badge badge-pro">LIFETIME</span>
+          <strong data-i18n="hero.trust4">One-Time Pro Lifetime ($3.99)</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Flagship Showcase — Quick Audio Switcher v3.4.2 -->
+    <section id="flagship" class="section container">
+      <div class="section-header">
+        <div class="section-eyebrow" data-i18n="showcase.eyebrow">
+          Flagship Release · v3.4.2.0
+        </div>
+        <h2 class="section-title" data-i18n="showcase.title">
+          Quick Audio Switcher — Smoked Liquid Glass Audio Command Center
+        </h2>
+        <p class="section-subtitle" data-i18n="showcase.subtitle">
+          Instant device switching, per-app audio routing, Game/Voice Chat-Mix, Dynamic Island with Alt click-through, Unified 3-in-1 Taskbar Dock, and 1-click Elgato Stream Deck integration.
+        </p>
+      </div>
+
+      <!-- Interactive Screenshot Viewer (5 Real Images) -->
+      <div class="shot-gallery glass-card specular-top" id="flagship-gallery">
+        <div class="shot-main">
+          <img
+            id="shot-main-img"
+            src="assets/screenshots/shot_1_hero.png"
+            alt="Dynamic Island 4-Tab, Unified Dock &amp; Side Edge Notch"
+            class="shot-main-image"
+          />
+          <div class="shot-caption shot-caption-bar">
+            <div class="shot-caption-text">
+              <span class="badge badge-pro" id="shot-main-step">01 / 05</span>
+              <strong id="shot-main-title" data-i18n="showcase.shot1">Dynamic Island 4-Tab, Unified Dock &amp; Side Edge Notch</strong>
+              <span id="shot-main-desc" class="text-secondary">
+                — Smoked Liquid Glass top-edge Dynamic Island with Controls, Calendar, Devices &amp; Music tabs plus Alt click-through Ghost Mode.
+              </span>
+            </div>
+            <div class="shot-caption-actions">
+              <a href="ms-windows-store://pdp/?ProductId=9PC7TTDCCN2V" class="btn btn-primary btn-sm" data-i18n="products.getStore">
+                Get on Microsoft Store
+              </a>
+              <a href="https://apps.microsoft.com/detail/9PC7TTDCCN2V" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" data-i18n="products.webStore">
+                View Store Page
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="shot-thumbs" role="tablist" aria-label="Quick Audio Switcher v3.4.2 Screenshots">
+          <button
+            type="button"
+            class="shot-thumb active"
+            role="tab"
+            aria-selected="true"
+            data-index="0"
+            data-src="assets/screenshots/shot_1_hero.png"
+            data-step="01 / 05"
+            data-title="Dynamic Island 4-Tab, Unified Dock &amp; Side Edge Notch"
+            data-desc="Smoked Liquid Glass top-edge Dynamic Island with Controls, Calendar, Devices &amp; Music tabs plus Alt click-through Ghost Mode."
+          >
+            <img src="assets/screenshots/shot_1_hero.png" alt="Dynamic Island 4-Tab, Unified Dock &amp; Side Edge Notch" loading="lazy" />
+            <span class="shot-thumb-label" data-i18n="showcase.shot1">Dynamic Island 4-Tab, Unified Dock &amp; Side Edge Notch</span>
+          </button>
+
+          <button
+            type="button"
+            class="shot-thumb"
+            role="tab"
+            aria-selected="false"
+            data-index="1"
+            data-src="assets/screenshots/shot_2_controls.png"
+            data-step="02 / 05"
+            data-title="4-Tab Bento Command Center &amp; Instant WinRT Wi-Fi/BT"
+            data-desc="Side-by-side dual Volume &amp; Display Brightness frosted capsules, Audio Studio sub-panel, and instant WinRT Wi-Fi &amp; Bluetooth control."
+          >
+            <img src="assets/screenshots/shot_2_controls.png" alt="4-Tab Bento Command Center &amp; Instant WinRT Wi-Fi/BT" loading="lazy" />
+            <span class="shot-thumb-label" data-i18n="showcase.shot2">4-Tab Bento Command Center &amp; Instant WinRT Wi-Fi/BT</span>
+          </button>
+
+          <button
+            type="button"
+            class="shot-thumb"
+            role="tab"
+            aria-selected="false"
+            data-index="2"
+            data-src="assets/screenshots/shot_3_mixer.png"
+            data-step="03 / 05"
+            data-title="Per-App Mixer, Output Routing &amp; Chat-Mix"
+            data-desc="Route individual apps to separate headphones or speakers, balance Game vs. Voice Chat-Mix, and control hovered app volume with Alt + Wheel."
+          >
+            <img src="assets/screenshots/shot_3_mixer.png" alt="Per-App Mixer, Output Routing &amp; Chat-Mix" loading="lazy" />
+            <span class="shot-thumb-label" data-i18n="showcase.shot3">Per-App Mixer, Output Routing &amp; Chat-Mix</span>
+          </button>
+
+          <button
+            type="button"
+            class="shot-thumb"
+            role="tab"
+            aria-selected="false"
+            data-index="3"
+            data-src="assets/screenshots/shot_4_surfaces.png"
+            data-step="04 / 05"
+            data-title="Unified 3-in-1 Spectrum Dock &amp; Side Edge Notch"
+            data-desc="Compact 316×34 taskbar dock with 1-click [● LIVE] Mic mute, 16-bar real-time visualizer, and ±2% scroll wheel volume on the Side Edge Notch."
+          >
+            <img src="assets/screenshots/shot_4_surfaces.png" alt="Unified 3-in-1 Spectrum Dock &amp; Side Edge Notch" loading="lazy" />
+            <span class="shot-thumb-label" data-i18n="showcase.shot4">Unified 3-in-1 Spectrum Dock &amp; Side Edge Notch</span>
+          </button>
+
+          <button
+            type="button"
+            class="shot-thumb"
+            role="tab"
+            aria-selected="false"
+            data-index="4"
+            data-src="assets/screenshots/shot_5_streamdeck.png"
+            data-step="05 / 05"
+            data-title="Elgato Stream Deck Plugin &amp; Local REST/WS API"
+            data-desc="1-click Elgato Stream Deck plugin installer and authenticated loopback REST/WebSocket control server on 127.0.0.1:49152."
+          >
+            <img src="assets/screenshots/shot_5_streamdeck.png" alt="Elgato Stream Deck Plugin &amp; Local REST/WS API" loading="lazy" />
+            <span class="shot-thumb-label" data-i18n="showcase.shot5">Elgato Stream Deck Plugin &amp; Local REST/WS API</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Free Forever vs. Pro Lifetime ($3.99 One-Time) Comparison Cards -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-eyebrow" data-i18n="tier.eyebrow">
+            Fair Indie Pricing · No Subscriptions Ever
+          </div>
+          <h3 class="section-title" data-i18n="tier.title">
+            Free Forever vs. Pro Lifetime
+          </h3>
+          <p class="section-subtitle" data-i18n="tier.subtitle">
+            Enjoy core 1-click audio switching and hotkeys free forever without ads, or unlock the full studio suite with a single lifetime purchase on Microsoft Store.
+          </p>
+        </div>
+
+        <div class="tier-grid">
+          <!-- Free Forever Card -->
+          <article class="tier-card glass-card specular-top">
+            <div class="tier-header">
+              <div>
+                <span class="badge badge-free" data-i18n="tier.freeBadge">FREE FOREVER</span>
+                <h4 class="tier-title tier-name" data-i18n="tier.freeTitle">Core Edition</h4>
+                <p class="text-secondary" data-i18n="tier.freeSub">No ads · No account required</p>
+              </div>
+              <div class="tier-price">
+                <span data-i18n="tier.freePrice">$0</span>
+                <small data-i18n="tier.freeUnit">Forever</small>
+              </div>
+            </div>
+
+            <ul class="tier-list tier-features">
+              <li>
+                <span>✓</span>
+                <div data-i18n="tier.f1">Instant speaker, headphone, and microphone switching with global hotkeys (Ctrl+Alt+D / Ctrl+Alt+M).</div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div data-i18n="tier.f2">4-tab Smoked Liquid Glass Dynamic Island (Controls, Calendar, Devices, Music) with Alt click-through Ghost Mode.</div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div data-i18n="tier.f3">Per-app volume mixer and Alt + Mouse Wheel gesture to tune any hovered window on the fly.</div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div data-i18n="tier.f4">Instant native WinRT Wi-Fi &amp; Bluetooth toggles (&lt;50ms), live CPU/RAM monitor, and Pomodoro timer.</div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div data-i18n="tier.f5">Complete local JSON settings export &amp; import backup with zero telemetry.</div>
+              </li>
+            </ul>
+
+            <div class="product-actions">
+              <a href="ms-windows-store://pdp/?ProductId=9PC7TTDCCN2V" class="btn btn-secondary" data-i18n="tier.downloadFree">
+                Download Free on Microsoft Store
+              </a>
+            </div>
+          </article>
+
+          <!-- Pro Lifetime ($3.99 One-Time) Card -->
+          <article class="tier-card tier-pro glass-card specular-top">
+            <div class="tier-header">
+              <div>
+                <span class="badge badge-pro" data-i18n="tier.proBadge">3-DAY FREE TRIAL · ONE-TIME</span>
+                <h4 class="tier-title tier-name" data-i18n="tier.proTitle">Pro Lifetime</h4>
+                <p class="text-secondary" data-i18n="tier.proSub">One-time purchase · 3-day free trial</p>
+              </div>
+              <div class="tier-price">
+                <span data-i18n="tier.proPrice">$3.99</span>
+                <small data-i18n="tier.proUnit">One-time</small>
+              </div>
+            </div>
+
+            <ul class="tier-list tier-features">
+              <li>
+                <span>✦</span>
+                <div data-i18n="tier.p1">Per-App Output Routing &amp; Chat-Mix: send apps to separate speakers/headphones and balance Game vs. Voice.</div>
+              </li>
+              <li>
+                <span>✦</span>
+                <div data-i18n="tier.p2">Audio Studio &amp; Smart Automation: Auto-Duck on calls, Call Autopilot, Safe Hearing guard, and unlimited app rules.</div>
+              </li>
+              <li>
+                <span>✦</span>
+                <div data-i18n="tier.p3">Pro Desktop Surfaces: Unified 3-in-1 Taskbar Dock, Side Edge Notch, Adaptive Album Glow, and custom glass themes.</div>
+              </li>
+              <li>
+                <span>✦</span>
+                <div data-i18n="tier.p4">Mic Lock &amp; Hardware Guards: lock mic gain, block USB device hijacks, remember volumes, and Bluetooth low-battery alerts.</div>
+              </li>
+              <li>
+                <span>✦</span>
+                <div data-i18n="tier.p5">Elgato Stream Deck &amp; Local REST/WebSocket API (127.0.0.1:49152), Radial Wheel (Ctrl+Alt+W), and Command Palette.</div>
+              </li>
+            </ul>
+
+            <div class="product-actions">
+              <a href="ms-windows-store://pdp/?ProductId=9PC7TTDCCN2V" class="btn btn-primary" data-i18n="tier.buyPro">
+                Unlock Pro Lifetime ($3.99)
+              </a>
+              <a href="docs.html" class="btn btn-ghost" data-i18n="products.docsBtn">
+                User Guide &amp; API
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 5-App Bento Product Shelf (id="products") -->
+    <section id="products" class="section container">
+      <div class="section-header">
+        <div class="section-eyebrow" data-i18n="products.eyebrow">
+          MTD Studio Ecosystem · 5 Native Windows Apps
+        </div>
+        <h2 class="section-title" data-i18n="products.title">
+          Our Microsoft Store Product Shelf
+        </h2>
+        <p class="section-subtitle" data-i18n="products.subtitle">
+          Every MTD Studio utility is crafted for speed, visual harmony, and strict 100% local privacy.
+        </p>
+      </div>
+
+      <div class="bento-grid" id="products-grid" data-products-grid>
+        <!-- Product 1: Quick Audio Switcher -->
+        <article class="product-card product-flagship span-12 specular-top" data-product-slug="quick-audio-switcher">
+          <div class="product-card-header">
+            <div class="product-icon"><img src="assets/logo.png" alt="Quick Audio Switcher Logo" width="44" height="44" /></div>
+            <div class="product-meta">
+              <span class="badge badge-pro">FLAGSHIP · v3.4.2.0</span>
+              <span class="badge badge-store">Store ID: 9PC7TTDCCN2V</span>
+              <span class="badge badge-free">Free Forever · Pro $3.99</span>
+            </div>
+          </div>
+
+          <div class="product-card-body">
+            <h3 class="product-title">Quick Audio Switcher - Sound &amp; Device Controller</h3>
+            <p class="product-tagline">
+              Smoked Liquid Glass Dynamic Island, Per-App Audio Router, Chat-Mix &amp; Elgato Stream Deck Hub for Windows 11
+            </p>
+            <p class="product-desc">
+              Switch playback and microphone devices in one click, mix and route individual app audio outputs, balance Game vs. Voice Chat, control spatial EQ, and trigger everything from Elgato Stream Deck or global hotkeys.
+            </p>
+          </div>
+
+          <ul class="product-highlights">
+            <li>Smoked Liquid Glass Dynamic Island, Unified 3-in-1 Taskbar Dock &amp; Side Edge Notch</li>
+            <li>1-Click Audio Output &amp; Microphone Switching + Alt+Wheel Hovered App Volume</li>
+            <li>Per-App Audio Output Routing, Dual-Output Mirroring &amp; Game/Voice Chat-Mix</li>
+            <li>Audio Studio: 5-Band EQ, Bass/Vocal Boost, Smart Auto-Ducking &amp; Safe Hearing Limiter</li>
+            <li>1-Click Elgato Stream Deck Plugin &amp; Local Loopback REST/WebSocket API (127.0.0.1:49152)</li>
+          </ul>
+
+          <div class="product-actions">
+            <a href="ms-windows-store://pdp/?ProductId=9PC7TTDCCN2V" class="btn btn-primary btn-sm" data-i18n="products.getStore">
+              Get on Microsoft Store
+            </a>
+            <a href="https://apps.microsoft.com/detail/9PC7TTDCCN2V" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-i18n="products.webStore">
+              View Store Page
+            </a>
+            <a href="docs.html" class="btn btn-secondary btn-sm" data-i18n="products.docsBtn">
+              User Guide &amp; API
+            </a>
+            <a href="support.html?app=quick-audio-switcher" class="btn btn-ghost btn-sm" data-i18n="products.supportBtn">
+              Get Support
+            </a>
+            <a href="privacy.html#quick-audio-switcher" class="btn btn-ghost btn-sm" data-i18n="products.privacyBtn">
+              Privacy Policy
+            </a>
+          </div>
+        </article>
+
+        <!-- Product 2: Daily Habit Tracker Widget (HabitGrid) -->
+        <article class="product-card specular-top" data-product-slug="habitgrid">
+          <div class="product-card-header">
+            <div class="product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <div class="product-meta">
+              <span class="badge badge-store">v3.2.0 · Productivity</span>
+              <span class="badge badge-free">100% Local JSON</span>
+            </div>
+          </div>
+
+          <div class="product-card-body">
+            <h3 class="product-title">Daily Habit Tracker Widget (HabitGrid)</h3>
+            <p class="product-tagline">
+              Windows 11 Desktop Habit Grid, GitHub-Style Streak Heatmap &amp; Pomodoro Focus Timer
+            </p>
+            <p class="product-desc">
+              Build lasting daily routines right on your Windows 11 desktop. Visualize your consistency with GitHub-inspired contribution heatmaps, pinned glass desktop widgets, smart reminders, and built-in Pomodoro focus sessions.
+            </p>
+          </div>
+
+          <ul class="product-highlights">
+            <li>365-Day GitHub-Style Streak Heatmap &amp; Consistency Analytics</li>
+            <li>Pin-to-Desktop Smoked Glass Widget with 1-Click Daily Check-In</li>
+            <li>Built-In Pomodoro Focus Timer &amp; Custom Routine Reminders</li>
+            <li>100% Offline SQLite/JSON Storage with Instant Local Backup &amp; Export</li>
+          </ul>
+
+          <div class="product-actions">
+            <a href="https://apps.microsoft.com/search?query=HabitGrid+MTD+Studio" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-i18n="products.getStore">
+              Get on Microsoft Store
+            </a>
+            <a href="support.html?app=habitgrid" class="btn btn-secondary btn-sm" data-i18n="products.supportBtn">
+              Get Support
+            </a>
+            <a href="privacy.html#habitgrid" class="btn btn-ghost btn-sm" data-i18n="products.privacyBtn">
+              Privacy Policy
+            </a>
+          </div>
+        </article>
+
+        <!-- Product 3: Batch File Renamer -->
+        <article class="product-card specular-top" data-product-slug="batch-file-renamer">
+          <div class="product-card-header">
+            <div class="product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/><path d="M9 13h6"/><path d="M9 17h4"/></svg></div>
+            <div class="product-meta">
+              <span class="badge badge-store">v2.4.0 · File Management</span>
+              <span class="badge badge-free">1-Click Undo Rollback</span>
+            </div>
+          </div>
+
+          <div class="product-card-body">
+            <h3 class="product-title">Batch File Renamer</h3>
+            <p class="product-tagline">
+              Fast Rule-Based Bulk File, Folder &amp; Photo Renaming Utility for Windows
+            </p>
+            <p class="product-desc">
+              Rename thousands of files, folders, and photos in milliseconds with live before/after diff previews, stackable rule pipelines, Regex, EXIF date/camera metadata tags, sequential numbering, and 1-click undo rollback.
+            </p>
+          </div>
+
+          <ul class="product-highlights">
+            <li>Real-Time Before/After Diff Preview &amp; Automatic Conflict Detection</li>
+            <li>Stackable Rule Pipeline: Find/Replace, Regex, Prefix/Suffix, Case &amp; Trim</li>
+            <li>Photo EXIF Date Taken, Dimensions &amp; Audio Tag Variable Insertion</li>
+            <li>1-Click Full Rollback / Undo History &amp; Saved Preset Templates</li>
+          </ul>
+
+          <div class="product-actions">
+            <a href="https://apps.microsoft.com/search?query=Batch+File+Renamer+MTD+Studio" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-i18n="products.getStore">
+              Get on Microsoft Store
+            </a>
+            <a href="support.html?app=batch-file-renamer" class="btn btn-secondary btn-sm" data-i18n="products.supportBtn">
+              Get Support
+            </a>
+            <a href="privacy.html#batch-file-renamer" class="btn btn-ghost btn-sm" data-i18n="products.privacyBtn">
+              Privacy Policy
+            </a>
+          </div>
+        </article>
+
+        <!-- Product 4: Quick Invoice Maker -->
+        <article class="product-card specular-top" data-product-slug="quick-invoice-maker">
+          <div class="product-card-header">
+            <div class="product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg></div>
+            <div class="product-meta">
+              <span class="badge badge-store">v2.1.0 · Business &amp; Finance</span>
+              <span class="badge badge-free">100% Offline Billing</span>
+            </div>
+          </div>
+
+          <div class="product-card-body">
+            <h3 class="product-title">Quick Invoice Maker</h3>
+            <p class="product-tagline">
+              Clean Offline Invoice, Estimate &amp; PDF Receipt Generator for Freelancers
+            </p>
+            <p class="product-desc">
+              Create polished, print-ready PDF invoices, quotes, and receipts in under 60 seconds without monthly SaaS fees. Manage clients, saved catalog items, multi-currency taxes, discounts, and payment terms 100% offline.
+            </p>
+          </div>
+
+          <ul class="product-highlights">
+            <li>Instant Vector PDF Export with Your Custom Business Logo &amp; Brand Colors</li>
+            <li>Multi-Currency, Tax/VAT, Discount &amp; Shipping Calculation Engine</li>
+            <li>Reusable Client Address Book &amp; Product/Service Item Catalog</li>
+            <li>100% Local Financial Privacy — Client Data Never Hits a Cloud Server</li>
+          </ul>
+
+          <div class="product-actions">
+            <a href="https://apps.microsoft.com/search?query=Quick+Invoice+Maker+MTD+Studio" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-i18n="products.getStore">
+              Get on Microsoft Store
+            </a>
+            <a href="support.html?app=quick-invoice-maker" class="btn btn-secondary btn-sm" data-i18n="products.supportBtn">
+              Get Support
+            </a>
+            <a href="privacy.html#quick-invoice-maker" class="btn btn-ghost btn-sm" data-i18n="products.privacyBtn">
+              Privacy Policy
+            </a>
+          </div>
+        </article>
+
+        <!-- Product 5: AuraDesk -->
+        <article class="product-card specular-top" data-product-slug="auradesk">
+          <div class="product-card-header">
+            <div class="product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+            <div class="product-meta">
+              <span class="badge badge-store">v1.5.0 · Focus &amp; Workspace</span>
+              <span class="badge badge-free">Offline Ambient Audio</span>
+            </div>
+          </div>
+
+          <div class="product-card-body">
+            <h3 class="product-title">AuraDesk</h3>
+            <p class="product-tagline">
+              Smart Desktop Workspace, Ambient Focus Audio &amp; Productivity Suite for Windows
+            </p>
+            <p class="product-desc">
+              Transform your Windows desktop into a calm, high-output workspace. Blend layered offline ambient soundscapes (rain, café, white/brown noise), launch workspace app profiles, and track deep-work sessions in Smoked Liquid Glass.
+            </p>
+          </div>
+
+          <ul class="product-highlights">
+            <li>Multi-Track Offline Ambient Sound Mixer (Rain, Fireplace, Café, Brown Noise)</li>
+            <li>1-Click Workspace Profiles &amp; Scratchpad Notes Dock</li>
+            <li>Smoked Liquid Glass Clock, Deep-Work Session Timer &amp; Break Alerts</li>
+            <li>Lightweight Native Engine with Zero Background Telemetry</li>
+          </ul>
+
+          <div class="product-actions">
+            <a href="https://apps.microsoft.com/search?query=AuraDesk+MTD+Studio" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-i18n="products.getStore">
+              Get on Microsoft Store
+            </a>
+            <a href="support.html?app=auradesk" class="btn btn-secondary btn-sm" data-i18n="products.supportBtn">
+              Get Support
+            </a>
+            <a href="privacy.html#auradesk" class="btn btn-ghost btn-sm" data-i18n="products.privacyBtn">
+              Privacy Policy
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast-notice" class="toast-notice" role="status" aria-live="polite" aria-atomic="true">
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Shared Smoked Liquid Glass Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-link">
+          <img src="assets/logo.png" alt="MTD Studio Logo" class="brand-logo" width="32" height="32" />
+          <span class="brand-name">MTD Studio</span>
+        </a>
+        <p class="footer-desc" data-i18n="footer.tagline">
+          High-craft native Windows 11 utilities designed with Smoked Liquid Glass and 100% local-first privacy.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colProducts">Products</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#products">Quick Audio Switcher v3.4.2</a></li>
+          <li><a href="index.html#products">Daily Habit Tracker (HabitGrid)</a></li>
+          <li><a href="index.html#products">Batch File Renamer</a></li>
+          <li><a href="index.html#products">Quick Invoice Maker</a></li>
+          <li><a href="index.html#products">AuraDesk</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colResources">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="docs.html" data-i18n="nav.docs">Docs &amp; API</a></li>
+          <li><a href="support.html" data-i18n="nav.support">Support Center</a></li>
+          <li><a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a></li>
+          <li><a href="privacy.html#quick-audio-switcher" data-i18n="footer.qasPrivacy">Quick Audio Switcher Privacy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer.colLegal">Privacy &amp; Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:developerhoangtruong@gmail.com">developerhoangtruong@gmail.com</a></li>
+          <li><a href="https://apps.microsoft.com/detail/9PC7TTDCCN2V" target="_blank" rel="noopener noreferrer" data-i18n="footer.storePage">Microsoft Store Page</a></li>
+          <li><a href="https://paypal.me/Developerhoangtruong" target="_blank" rel="noopener noreferrer" data-i18n="footer.paypalTip">PayPal Tip Jar (Voluntary)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p data-i18n="footer.rights">© 2026 MTD Studio. All rights reserved. Microsoft, Windows, and the Microsoft Store logo are trademarks of Microsoft Corporation.</p>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
